@@ -16,6 +16,9 @@ public:
     startClosed: {{ .Env.CHAT_START_CLOSED }}
   pads:
     url: https://{{ .Env.DOMAIN }}/pad
+  media:
+    audio:
+      defaultFullAudioBridge: fullaudio
 private:
   app:
     host: 0.0.0.0
