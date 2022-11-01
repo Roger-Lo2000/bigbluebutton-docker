@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: recordings
+  name: recordings
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: recordings
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/bbb-net: "true"
+        io.kompose.service: recordings
+    spec:
+      containers:
+        - env:
+            - name: DOMAIN
+              value: test1000.mmlab.live
+          image: alangecker/bbb-docker-recordings:v2.5.5
+          ports:
+          - containerPort: 3000
+          name: recordings
+          resources: {}
+          volumeMounts:
+            - mountPath: /var/bigbluebutton
+              name: bigbluebutton
+            - mountPath: /var/freeswitch/meetings
+              name: vol-freeswitch
+            - mountPath: /var/mediasoup
+              name: vol-mediasoup
+            - mountPath: /var/kurento
+              name: vol-kurento
+            - mountPath: /var/log/bigbluebutton
+              name: recordings-tmpfs0
+            - mountPath: /tmp
+              name: recordings-tmpfs1
+      restartPolicy: Always
+      volumes:
+        - name: bigbluebutton
+          persistentVolumeClaim:
+            claimName: bigbluebutton
+        - name: vol-freeswitch
+          persistentVolumeClaim:
+            claimName: vol-freeswitch
+        - name: vol-mediasoup
+          persistentVolumeClaim:
+            claimName: vol-mediasoup
+        - name: vol-kurento
+          persistentVolumeClaim:
+            claimName: vol-kurento
+        - emptyDir:
+            medium: Memory
+          name: recordings-tmpfs0
+        - emptyDir:
+            medium: Memory
+          name: recordings-tmpfs1
+status: {}

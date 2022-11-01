@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: bbb-web
+  name: bbb-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: bbb-web
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/bbb-net: "true"
+        io.kompose.service: bbb-web
+    spec:
+      containers:
+        - env:
+            - name: DEV_MODE
+            - name: DOMAIN
+              value: test1000.mmlab.live
+            - name: ENABLE_LEARNING_DASHBOARD
+              value: "true"
+            - name: ENABLE_RECORDING
+              value: "true"
+            - name: NUMBER_OF_BACKEND_NODEJS_PROCESSES
+              value: "2"
+            - name: SHARED_SECRET
+              value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
+            - name: STUN_SERVER
+              value: stun:35.194.187.33:3478
+            - name: TURN_SECRET
+              value: 86b5SM4DJdbODf54AL6feE7bBIG7R5WD
+            - name: TURN_SERVER
+              value: turns:test1000.mmlab.live:5349?transport=tcp
+            - name: WELCOME_FOOTER
+              value: '"This server is running <a href=''https://docs.bigbluebutton.org/'''' target=''_blank''><u>BigBlueButton</u></a>."'
+            - name: WELCOME_MESSAGE
+              value: '"Welcome to <b>%%CONFNAME%%</b>!<br><br>For help on using BigBlueButton see these (short) <a href=''https://www.bigbluebutton.org/html5'' target=''_blank''><u>tutorial videos</u></a>.<br><br>To join the audio bridge click the speaker button.  Use a headset to avoid causing background noise for others."'
+          image: alangecker/bbb-docker-web:v2.5.5
+          ports:
+          - containerPort: 3000
+#          livenessProbe:
+#            exec:
+#              command:
+#                - wget --no-proxy --no-verbose --tries=1 --spider http://10.7.7.2:8090/bigbluebutton/api || exit 1
+#            initialDelaySeconds: 120
+          name: bbb-web
+          resources: {}
+          volumeMounts:
+            - mountPath: /var/bigbluebutton
+              name: bigbluebutton
+            - mountPath: /var/freeswitch/meetings
+              name: vol-freeswitch
+      restartPolicy: Always
+      volumes:
+        - name: bigbluebutton
+          persistentVolumeClaim:
+            claimName: bigbluebutton
+        - name: vol-freeswitch
+          persistentVolumeClaim:
+            claimName: vol-freeswitch
+status: {}

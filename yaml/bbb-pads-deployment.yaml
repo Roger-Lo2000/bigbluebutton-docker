@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: bbb-pads
+  name: bbb-pads
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: bbb-pads
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/bbb-net: "true"
+        io.kompose.service: bbb-pads
+        app: bbb-pads
+    spec:
+      containers:
+        - env:
+            - name: ETHERPAD_API_KEY
+              value: 1LeU6Do5DkpC8NWt8q4iyBCePO81PRIB6Rv1UvcA
+          image: us-docker.pkg.dev/bbb-v2-54-test/gcr.io/bbb-pads:v1.2.1 
+          ports:
+          - containerPort: 3000
+          name: bbb-pads
+          resources: {}
+      restartPolicy: Always
+status: {}

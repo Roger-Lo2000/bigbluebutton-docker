@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: periodic
+  name: periodic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: periodic
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/bbb-net: "true"
+        io.kompose.service: periodic
+    spec:
+      containers:
+        - env:
+            - name: ENABLE_RECORDING
+              value: "true"
+            - name: RECORDING_MAX_AGE_DAYS
+              value: "3"
+            - name: REMOVE_OLD_RECORDING
+              value: "true"
+          image: alangecker/bbb-docker-periodic:v2.5.0-rc.1
+          name: periodic
+          ports:
+          - containerPort: 3000
+          resources: {}
+          volumeMounts:
+            - mountPath: /var/run/docker.sock
+              name: periodic-claim0
+            - mountPath: /var/bigbluebutton
+              name: bigbluebutton
+            - mountPath: /var/mediasoup
+              name: vol-mediasoup
+            - mountPath: /var/log/bigbluebutton
+              name: periodic-tmpfs0
+      restartPolicy: Always
+      volumes:
+        - name: periodic-claim0
+          persistentVolumeClaim:
+            claimName: periodic-claim0
+        - name: bigbluebutton
+          persistentVolumeClaim:
+            claimName: bigbluebutton
+        - name: vol-mediasoup
+          persistentVolumeClaim:
+            claimName: vol-mediasoup
+        - emptyDir:
+            medium: Memory
+          name: periodic-tmpfs0
+status: {}

@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mongodb
+  name: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mongodb
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/bbb-net: "true"
+        io.kompose.service: mongodb
+    spec:
+      containers:
+        - command: ["mongod"]
+          args:
+            - --config
+            - /etc/mongod.conf
+            - --oplogSize
+            - "8"
+            - --replSet
+            - rs0
+            - --noauth
+          image: mongo:5.0
+          ports:
+          - containerPort: 27017 
+#          livenessProbe:
+#            exec:
+#              command:
+#                - bash -c "if mongo --eval 'quit(db.runCommand({ ping':' 1 }).ok ? 0 ':' 2)'; then exit 0; fi; exit 1;"
+          name: bbb-mongodb
+          resources: {}
+          volumeMounts:
+            - mountPath: /etc/mongod.conf
+              name: mongodb-claim0
+            - mountPath: /docker-entrypoint-initdb.d/init-replica.sh
+              name: mongodb-claim1
+            - mountPath: /data/configdb
+              name: mongodb-tmpfs0
+            - mountPath: /data/db
+              name: mongodb-tmpfs1
+      restartPolicy: Always
+      volumes:
+        - name: mongodb-claim0
+          persistentVolumeClaim:
+            claimName: mongodb-claim0
+        - name: mongodb-claim1
+          persistentVolumeClaim:
+            claimName: mongodb-claim1
+        - emptyDir:
+            medium: Memory
+          name: mongodb-tmpfs0
+        - emptyDir:
+            medium: Memory
+          name: mongodb-tmpfs1
+status: {}

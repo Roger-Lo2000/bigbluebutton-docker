@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: prometheus-exporter
+  name: prometheus-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: prometheus-exporter
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/bbb-net: "true"
+        io.kompose.service: prometheus-exporter
+    spec:
+      containers:
+        - env:
+            - name: API_BASE_URL
+              value: http://10.7.7.1:48087/bigbluebutton/api/
+            - name: API_SECRET
+              value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
+            - name: RECORDINGS_METRICS_READ_FROM_DISK
+              value: "true"
+          image: greenstatic/bigbluebutton-exporter:latest
+          ports:
+          - containerPort: 3000
+          name: prometheus-exporter
+          resources: {}
+          volumeMounts:
+            - mountPath: /var/bigbluebutton
+              name: bigbluebutton
+              readOnly: true
+      restartPolicy: Always
+      volumes:
+        - name: bigbluebutton
+          persistentVolumeClaim:
+            claimName: bigbluebutton
+            readOnly: true
+status: {}

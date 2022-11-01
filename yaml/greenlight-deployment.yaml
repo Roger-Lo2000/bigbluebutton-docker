@@ -1,0 +1,169 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: greenlight
+  name: greenlight
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: greenlight
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: greenlight
+    spec:
+      containers:
+        - env:
+            - name: ALLOW_GREENLIGHT_ACCOUNTS
+              value: "true"
+            - name: ANNOUNCED_IPv4
+              value: 35.194.187.33
+            - name: AUTO_SHARE_WEBCAM
+              value: "false"
+            - name: BIGBLUEBUTTON_ENDPOINT
+              value: https://test1000.mmlab.live/bigbluebutton/api/
+            - name: BIGBLUEBUTTON_SECRET
+              value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
+            - name: BREAKOUTROOM_LIMIT
+              value: "8"
+            - name: CHAT_ENABLED
+              value: "true"
+            - name: CHAT_START_CLOSED
+              value: "false"
+            - name: CLIENT_TITLE
+              value: BigBlueButton
+            - name: DB_ADAPTER
+              value: postgresql
+            - name: DB_HOST
+              value: postgres
+            - name: DB_NAME
+              value: greenlight
+            - name: DB_PASSWORD
+              value: JHs9Tt9uP7DxtSuEucZWZccILs0RDMahv92cZX2R
+            - name: DB_USERNAME
+              value: postgres
+            - name: DEFAULT_PRESENTATION
+              value: ./mod/nginx/default.pdf
+            - name: DEFAULT_REGISTRATION
+              value: open
+            - name: DISABLE_ECHO_TEST
+              value: "false"
+            - name: DISABLE_SOUND_ALONE
+              value: "false"
+            - name: DISABLE_SOUND_MUTED
+              value: "false"
+            - name: DISABLE_VIDEO_PREVIEW
+              value: "false"
+            - name: DOMAIN
+              value: test1000.mmlab.live
+            - name: ENABLE_COTURN
+              value: "true"
+            - name: ENABLE_GOOGLE_CALENDAR_BUTTON
+            - name: ENABLE_GREENLIGHT
+              value: "true"
+            - name: ENABLE_HTTPS_PROXY
+              value: "true"
+            - name: ENABLE_LEARNING_DASHBOARD
+              value: "true"
+            - name: ENABLE_PROMETHEUS_EXPORTER
+              value: "true"
+            - name: ENABLE_PROMETHEUS_EXPORTER_OPTIMIZATION
+              value: "true"
+            - name: ENABLE_RECORDING
+              value: "true"
+            - name: ETHERPAD_API_KEY
+              value: 1LeU6Do5DkpC8NWt8q4iyBCePO81PRIB6Rv1UvcA
+            - name: EXTERNAL_IPv4
+              value: 35.194.187.33
+            - name: EXTERNAL_IPv6
+            - name: FSESL_PASSWORD
+              value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
+            - name: HELP_URL
+              value: https://docs.bigbluebutton.org/greenlight/gl-overview.html
+            - name: INTERNAL_IPv4
+              value: 10.140.0.35
+            - name: LDAP_AUTH
+            - name: LDAP_BASE
+            - name: LDAP_BIND_DN
+            - name: LDAP_FILTER
+            - name: LDAP_METHOD
+            - name: LDAP_PASSWORD
+            - name: LDAP_PORT
+            - name: LDAP_ROLE_FIELD
+            - name: LDAP_SERVER
+            - name: LDAP_UID
+            - name: LISTEN_ONLY_MODE
+              value: "true"
+            - name: MAINTENANCE_MODE
+              value: "false"
+            - name: MAINTENANCE_WINDOW
+            - name: NUMBER_OF_BACKEND_NODEJS_PROCESSES
+              value: "2"
+            - name: NUMBER_OF_FRONTEND_NODEJS_PROCESSES
+              value: "2"
+            - name: NUMBER_OF_ROWS
+              value: "25"
+            - name: OAUTH2_REDIRECT
+            - name: OFFICE365_HD
+            - name: OFFICE365_KEY
+            - name: OFFICE365_SECRET
+            - name: PAGINATION_NUMBER
+              value: "25"
+            - name: POSTGRESQL_SECRET
+              value: JHs9Tt9uP7DxtSuEucZWZccILs0RDMahv92cZX2R
+            - name: RAILS_SECRET
+              value: 74bb1bce7709cf76b7bd079bba7eff0386573ab543273eb62bd73fff209098e9781c55d5b25ba3a24353c10d7a6ea6cf5de74cd4d73fbb97f0fdc6ab807f439c
+            - name: RECORDING_MAX_AGE_DAYS
+              value: "3"
+            - name: RELATIVE_URL_ROOT
+              value: /b
+            - name: REMOVE_OLD_RECORDING
+              value: "true"
+            - name: ROOM_FEATURES
+              value: mute-on-join,require-moderator-approval,anyone-can-start,all-join-moderator
+            - name: SECRET_KEY_BASE
+              value: 74bb1bce7709cf76b7bd079bba7eff0386573ab543273eb62bd73fff209098e9781c55d5b25ba3a24353c10d7a6ea6cf5de74cd4d73fbb97f0fdc6ab807f439c
+            - name: SHARED_SECRET
+              value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
+            - name: SIP_IP_ALLOWLIST
+            - name: SMTP_AUTH
+            - name: SMTP_DOMAIN
+              value: test1000.mmlab.live
+            - name: SMTP_PASSWORD
+            - name: SMTP_PORT
+            - name: SMTP_SENDER
+            - name: SMTP_SERVER
+            - name: SMTP_STARTTLS_AUTO
+            - name: SMTP_USERNAME
+            - name: SOUNDS_LANGUAGE
+              value: en-us-callie
+            - name: STUN_IP
+              value: 35.194.187.33
+            - name: STUN_PORT
+              value: "3478"
+            - name: TURN_SECRET
+              value: 86b5SM4DJdbODf54AL6feE7bBIG7R5WD
+            - name: TURN_SERVER
+              value: turns:test1000.mmlab.live:5349?transport=tcp
+            - name: WELCOME_FOOTER
+              value: '"This server is running <a href=''https://docs.bigbluebutton.org/'''' target=''_blank''><u>BigBlueButton</u></a>."'
+            - name: WELCOME_MESSAGE
+              value: '"Welcome to <b>%%CONFNAME%%</b>!<br><br>For help on using BigBlueButton see these (short) <a href=''https://www.bigbluebutton.org/html5'' target=''_blank''><u>tutorial videos</u></a>.<br><br>To join the audio bridge click the speaker button.  Use a headset to avoid causing background noise for others."'
+          image: bigbluebutton/greenlight:v2
+          name: greenlight
+          ports:
+            - containerPort: 80
+          resources: {}
+      restartPolicy: Always
+status: {}

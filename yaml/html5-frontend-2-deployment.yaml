@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: html5-frontend-2
+  name: html5-frontend-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: html5-frontend-2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/bbb-net: "true"
+        io.kompose.service: html5-frontend-2
+    spec:
+      containers:
+        - env:
+            - name: AUTO_SHARE_WEBCAM
+              value: "false"
+            - name: BBB_HTML5_ROLE
+              value: frontend
+            - name: BREAKOUTROOM_LIMIT
+              value: "8"
+            - name: CHAT_ENABLED
+              value: "true"
+            - name: CHAT_START_CLOSED
+              value: "false"
+            - name: CLIENT_TITLE
+              value: BigBlueButton
+            - name: DEV_MODE
+            - name: DISABLE_ECHO_TEST
+              value: "false"
+            - name: DISABLE_VIDEO_PREVIEW
+              value: "false"
+            - name: DOMAIN
+              value: test1000.mmlab.live
+            - name: INSTANCE_ID
+              value: "2"
+            - name: LISTEN_ONLY_MODE
+              value: "true"
+            - name: PORT
+              value: "4101"
+          image: alangecker/bbb-docker-html5:v2.5.5
+          ports:
+          - containerPort: 3000
+          name: html5-frontend-2
+          resources: {}
+          volumeMounts:
+            - mountPath: /html5-static
+              name: html5-static
+      restartPolicy: Always
+      volumes:
+        - name: html5-static
+          persistentVolumeClaim:
+            claimName: html5-static
+status: {}

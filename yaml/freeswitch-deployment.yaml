@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: freeswitch
+  name: freeswitch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: freeswitch
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: freeswitch
+    spec:
+      containers:
+        - env:
+            - name: ANNOUNCED_IPv4
+              value: 35.194.187.33
+            - name: DISABLE_SOUND_ALONE
+              value: "false"
+            - name: DISABLE_SOUND_MUTED
+              value: "false"
+            - name: DOMAIN
+              value: test1000.mmlab.live
+            - name: ESL_PASSWORD
+              value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
+            - name: EXTERNAL_IPv4
+              value: 35.194.187.33
+            - name: EXTERNAL_IPv6
+              value: ::1
+            - name: SIP_IP_ALLOWLIST
+            - name: SOUNDS_LANGUAGE
+              value: en-us-callie
+          image: alangecker/bbb-docker-freeswitch:v2.5.0
+          ports:
+          - containerPort: 8021
+          name: bbb-freeswitch
+          resources: {}
+          securityContext:
+            capabilities:
+              add:
+                - IPC_LOCK
+                - NET_ADMIN
+                - NET_RAW
+                - NET_BROADCAST
+                - SYS_NICE
+                - SYS_RESOURCE
+          volumeMounts:
+            - mountPath: /etc/freeswitch/sip_profiles/external
+              name: freeswitch-claim0
+            - mountPath: /etc/freeswitch/dialplan/public_docker
+              name: freeswitch-claim1
+            - mountPath: /var/freeswitch/meetings
+              name: vol-freeswitch
+      restartPolicy: Always
+      volumes:
+        - name: freeswitch-claim0
+          persistentVolumeClaim:
+            claimName: freeswitch-claim0
+        - name: freeswitch-claim1
+          persistentVolumeClaim:
+            claimName: freeswitch-claim1
+        - name: vol-freeswitch
+          persistentVolumeClaim:
+            claimName: vol-freeswitch
+status: {}

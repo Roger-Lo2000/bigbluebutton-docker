@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: coturn
+  name: coturn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: coturn
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: coturn
+    spec:
+      containers:
+        - args:
+            - --external-ip=35.194.187.33/35.194.187.33
+            - --external-ip=::1/::1
+            - --static-auth-secret=86b5SM4DJdbODf54AL6feE7bBIG7R5WD
+          env:
+            - name: ENABLE_HTTPS_PROXY
+              value: "true"
+          image: coturn/coturn:4.5-alpine
+          ports:
+          - containerPort: 3000
+          name: coturn
+          resources: {}
+          volumeMounts:
+            - mountPath: /etc/resty-auto-ssl
+              name: ssl-data
+            - mountPath: /usr/local/bin/docker-entrypoint.sh
+              name: coturn-claim1
+            - mountPath: /etc/coturn/turnserver.conf
+              name: coturn-claim2
+      restartPolicy: Always
+      volumes:
+        - name: ssl-data
+          persistentVolumeClaim:
+            claimName: ssl-data
+        - name: coturn-claim1
+          persistentVolumeClaim:
+            claimName: coturn-claim1
+        - name: coturn-claim2
+          persistentVolumeClaim:
+            claimName: coturn-claim2
+status: {}
