@@ -198,7 +198,7 @@
 
   "dbType": "redis",
   "dbSettings": {
-    "host": "redis",
+    "host": "10.111.83.5",
     "port": 6379
   },
 
@@ -521,7 +521,7 @@
    */
 
   "ep_redis_publisher": {
-    "host": "redis",
+    "host": "10.111.83.5",
     "port": 6379
   },
 
