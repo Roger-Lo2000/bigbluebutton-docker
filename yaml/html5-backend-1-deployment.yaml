@@ -51,9 +51,9 @@ spec:
               value: "true"
             - name: PORT
               value: "4000"
-          image: alangecker/bbb-docker-html5:v2.5.5
+          image: us-docker.pkg.dev/bbb-v2-54-test/gcr.io/bbb-html5:v2.5.5
           ports: 
-          - containerPort: 3000
+          - containerPort: 4000
           name: html5-backend-1
           resources: {}
       restartPolicy: Always
