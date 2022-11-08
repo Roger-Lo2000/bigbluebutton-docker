@@ -24,6 +24,7 @@ spec:
       labels:
         io.kompose.network/bbb-net: "true"
         io.kompose.service: mongodb
+        app: mongodb
     spec:
       containers:
         - command: ["mongod"]
@@ -35,9 +36,21 @@ spec:
             - --replSet
             - rs0
             - --noauth
+#        - command: ["mongod", "--config", "/etc/mongod.conf", "--oplogSize", "8", "--replSet", "rs0", "--noauth"]
           image: mongo:5.0
           ports:
-          - containerPort: 27017 
+          - containerPort: 27017
+#          env:
+#          - name: MONGO_INITDB_ROOT_USERNAME
+#            valueFrom:
+#               secretKeyRef:
+#                name: mongodb-secret
+#                key: mongo-root-username
+#          - name: MONGO_INITDB_ROOT_PASSWORD
+#            valueFrom:
+#               secretKeyRef:
+#                name: mongodb-secret
+#                key: mongo-root-password
 #          livenessProbe:
 #            exec:
 #              command:
