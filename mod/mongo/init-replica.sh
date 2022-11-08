@@ -15,9 +15,9 @@ mongod --oplogSize 8 --replSet rs0 --noauth \
    --pidfilepath /tmp/docker-entrypoint-temp-mongod.pid --fork
 
 # init replset with defaults
-mongo 10.7.7.6 --eval "rs.initiate({
+mongo 172.17.0.7 --eval "rs.initiate({
    _id: 'rs0',
-   members: [ { _id: 0, host: '10.7.7.6:27017' } ]
+   members: [ { _id: 0, host: '172.17.0.7:27017' } ]
 })"
 
 echo "Waiting to become a master"
