@@ -1,3 +1,19 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: freeswitch
+  labels:
+    app: freeswitch
+    test: 'true'
+    environment: testing
+data:
+  freeswitch.log.level: info
+  freeswitch.log.color: 'true'
+  freeswitch.rtp.port-range: '16384-32768'
+  freeswitch.disable-nat-detection: 'false'
+  freeswitch.tls.enable: 'false'
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,29 +39,57 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: freeswitch
+        app: freeswitch
     spec:
+      hostNetwork: true
       containers:
         - env:
             - name: ANNOUNCED_IPv4
-              value: 35.194.187.33
+              value: 34.80.126.38
             - name: DISABLE_SOUND_ALONE
               value: "false"
             - name: DISABLE_SOUND_MUTED
               value: "false"
             - name: DOMAIN
-              value: test1000.mmlab.live
+              value: test.mmlab.live
             - name: ESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: EXTERNAL_IPv4
-              value: 35.194.187.33
+              value: 34.80.126.38
             - name: EXTERNAL_IPv6
               value: ::1
             - name: SIP_IP_ALLOWLIST
             - name: SOUNDS_LANGUAGE
               value: en-us-callie
-          image: alangecker/bbb-docker-freeswitch:v2.5.0
+            - name: FREESWITCH_LOG_LEVEL
+              valueFrom:
+                configMapKeyRef:
+                  name: freeswitch
+                  key: freeswitch.log.level
+            - name: FREESWITCH_LOG_COLOR
+              valueFrom:
+                configMapKeyRef:
+                  name: freeswitch
+                  key: freeswitch.log.color
+            - name: FREESWITCH_RTP_PORT_RANGE
+              valueFrom:
+                configMapKeyRef:
+                  name: freeswitch
+                  key: freeswitch.rtp.port-range
+            - name: FREESWITCH_DISABLE_NAT_DETECTION
+              valueFrom:
+                configMapKeyRef:
+                  name: freeswitch
+                  key: freeswitch.disable-nat-detection
+            - name: FREESWITCH_TLS_ENABLE
+              valueFrom:
+                configMapKeyRef:
+                  name: freeswitch
+                  key: freeswitch.tls.enable
+          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-freeswitch:v2.5.0
           ports:
-          - containerPort: 8021
+          - name: fsesl
+            containerPort: 8021
           name: bbb-freeswitch
           resources: {}
           securityContext:
