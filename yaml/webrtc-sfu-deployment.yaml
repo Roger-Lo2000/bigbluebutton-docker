@@ -42,7 +42,7 @@ spec:
               value: '[{"ip":"10.140.0.35", "announcedIp":"35.194.187.33"}]'
             - name: REDIS_HOST
               value: 10.7.7.5
-          image: alangecker/bbb-docker-webrtc-sfu:v2.8.5
+          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-webrtc-sfu:v2.8.5
           ports:
           - containerPort: 3000
           name: webrtc-sfu

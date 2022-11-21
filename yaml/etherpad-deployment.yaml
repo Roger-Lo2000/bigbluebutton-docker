@@ -29,7 +29,7 @@ spec:
         - env:
             - name: ETHERPAD_API_KEY
               value: 1LeU6Do5DkpC8NWt8q4iyBCePO81PRIB6Rv1UvcA
-          image: us-docker.pkg.dev/bbb-v2-54-test/gcr.io/etherpad:1.8.18-2
+          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-etherpad:1.8.18-2
           ports:
           - containerPort: 6379
           name: etherpad
