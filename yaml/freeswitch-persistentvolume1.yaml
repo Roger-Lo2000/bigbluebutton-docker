@@ -11,4 +11,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/conf/dialplan_public"
+    path: "/home/mod/freeswitch/conf/dialplan_public"

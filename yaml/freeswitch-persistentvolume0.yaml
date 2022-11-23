@@ -11,4 +11,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/conf/sip_profiles"
+    path: "/home/mod/freeswitch/conf/sip_profiles"
