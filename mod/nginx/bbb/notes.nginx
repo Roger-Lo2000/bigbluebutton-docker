@@ -7,7 +7,7 @@ location /pad/p/ {
 
     rewrite /pad/p/(.*) /p/$1 break;
     rewrite ^/pad/p$ /pad/p/ permanent;
-    proxy_pass http://etherpad:9001/p;
+    proxy_pass http://etherpad-service:9001/p;
     proxy_pass_header Server;
     proxy_redirect /p /pad/p;
     proxy_set_header Host $host;
@@ -24,7 +24,7 @@ location /pad/p/ {
 
 location /pad/auth_session {
     rewrite /pad/auth_session(.*) /auth_session$1 break;
-    proxy_pass http://etherpad:9001/;
+    proxy_pass http://etherpad-service:9001/;
     proxy_pass_header Server;
     proxy_set_header Host $host;
     proxy_buffering off;
@@ -35,7 +35,7 @@ location /pad/auth_session {
 location /pad {
     rewrite /pad/(.*) /$1 break;
     rewrite ^/pad$ /pad/ permanent;
-    proxy_pass http://etherpad:9001/;
+    proxy_pass http://etherpad-service:9001/;
     proxy_pass_header Server;
     proxy_redirect / /pad/;
     proxy_set_header Host $host;
@@ -44,14 +44,14 @@ location /pad {
 
 location /pad/socket.io/socket.io.js {
     rewrite /pad/socket.io/socket.io.js /socket.io/socket.io.js break;
-    proxy_pass http://etherpad:9001/;
+    proxy_pass http://etherpad-service:9001/;
     proxy_set_header Host $host;
     proxy_buffering off;
 }
 
 location /pad/socket.io {
     rewrite /pad/socket.io/(.*) /socket.io/$1 break;
-    proxy_pass http://etherpad:9001/;
+    proxy_pass http://etherpad-service:9001/;
     proxy_redirect / /pad/;
     proxy_set_header Host $host;
     proxy_buffering off;
@@ -70,7 +70,7 @@ location /pad/socket.io {
 
 location /static {
     rewrite /static/(.*) /static/$1 break;
-    proxy_pass http://etherpad:9001/;
+    proxy_pass http://etherpad-service:9001/;
     proxy_set_header Host $host;
     proxy_buffering off;
 }

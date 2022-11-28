@@ -1,5 +1,5 @@
 location /verto {
-  proxy_pass https://host.docker.internal:8082;
+  proxy_pass https://192.168.49.2:8082;
   proxy_http_version 1.1;
   proxy_set_header Upgrade $http_upgrade;
   proxy_set_header Connection "Upgrade";
