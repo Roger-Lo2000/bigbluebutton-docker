@@ -28,7 +28,7 @@ spec:
       containers:
         - env:
             - name: API_BASE_URL
-              value: http://10.7.7.1:48087/bigbluebutton/api/
+              value: http://192.168.49.2:48087/bigbluebutton/api/
             - name: API_SECRET
               value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
             - name: RECORDINGS_METRICS_READ_FROM_DISK
