@@ -23,28 +23,30 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: webrtc-sfu
+        app: webrtc-sfu
     spec:
+      hostNetwork: true
       containers:
         - env:
             - name: CLIENT_HOST
-              value: 10.7.7.1
+              value: 192.168.49.2
             - name: ESL_IP
-              value: 10.7.7.1
+              value: 192.168.49.2
             - name: ESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: FREESWITCH_IP
-              value: 10.7.7.1
+              value: 192.168.49.2
             - name: FREESWITCH_SIP_IP
-              value: 35.194.187.33
+              value: 34.80.126.38
             - name: MS_RTP_LISTEN_IP
-              value: '{"ip":"0.0.0.0", "announcedIp":"35.194.187.33"}'
+              value: '{"ip":"0.0.0.0", "announcedIp":"34.80.126.38"}'
             - name: MS_WEBRTC_LISTEN_IPS
-              value: '[{"ip":"10.140.0.35", "announcedIp":"35.194.187.33"}]'
+              value: '[{"ip":"10.140.15.211", "announcedIp":"34.80.126.38"}]'
             - name: REDIS_HOST
-              value: 10.7.7.5
+              value: 10.111.83.5
           image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-webrtc-sfu:v2.8.5
           ports:
-          - containerPort: 3000
+          - containerPort: 5066
           name: webrtc-sfu
           resources: {}
           volumeMounts:
