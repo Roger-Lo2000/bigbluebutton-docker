@@ -24,11 +24,12 @@ spec:
       labels:
         io.kompose.service: nginx
     spec:
+      hostNetwork: true
       containers:
-        - image: alangecker/bbb-docker-nginx:1.21-v4.0.0-v2.5.5
+        - image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-nginx:1.21-v4.0.0-v2.5.5
           name: nginx
           ports:
-          - containerPort: 3000
+          - containerPort: 7443
           resources: {}
           volumeMounts:
             - mountPath: /var/bigbluebutton
