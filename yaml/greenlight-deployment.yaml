@@ -28,11 +28,11 @@ spec:
             - name: ALLOW_GREENLIGHT_ACCOUNTS
               value: "true"
             - name: ANNOUNCED_IPv4
-              value: 35.194.187.33
+              value: 34.80.142.158
             - name: AUTO_SHARE_WEBCAM
               value: "false"
             - name: BIGBLUEBUTTON_ENDPOINT
-              value: https://test1000.mmlab.live/bigbluebutton/api/
+              value: https://test.mmlab.live/bigbluebutton/api/
             - name: BIGBLUEBUTTON_SECRET
               value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
             - name: BREAKOUTROOM_LIMIT
@@ -66,7 +66,7 @@ spec:
             - name: DISABLE_VIDEO_PREVIEW
               value: "false"
             - name: DOMAIN
-              value: test1000.mmlab.live
+              value: test.mmlab.live
             - name: ENABLE_COTURN
               value: "true"
             - name: ENABLE_GOOGLE_CALENDAR_BUTTON
@@ -85,14 +85,14 @@ spec:
             - name: ETHERPAD_API_KEY
               value: 1LeU6Do5DkpC8NWt8q4iyBCePO81PRIB6Rv1UvcA
             - name: EXTERNAL_IPv4
-              value: 35.194.187.33
+              value: 31.80.142.158
             - name: EXTERNAL_IPv6
             - name: FSESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: HELP_URL
               value: https://docs.bigbluebutton.org/greenlight/gl-overview.html
             - name: INTERNAL_IPv4
-              value: 10.140.0.35
+              value: 10.140.15.211
             - name: LDAP_AUTH
             - name: LDAP_BASE
             - name: LDAP_BIND_DN
@@ -139,7 +139,7 @@ spec:
             - name: SIP_IP_ALLOWLIST
             - name: SMTP_AUTH
             - name: SMTP_DOMAIN
-              value: test1000.mmlab.live
+              value: test.mmlab.live
             - name: SMTP_PASSWORD
             - name: SMTP_PORT
             - name: SMTP_SENDER
@@ -149,13 +149,13 @@ spec:
             - name: SOUNDS_LANGUAGE
               value: en-us-callie
             - name: STUN_IP
-              value: 35.194.187.33
+              value: 34.80.142.158
             - name: STUN_PORT
               value: "3478"
             - name: TURN_SECRET
               value: 86b5SM4DJdbODf54AL6feE7bBIG7R5WD
             - name: TURN_SERVER
-              value: turns:test1000.mmlab.live:5349?transport=tcp
+              value: turns:test.mmlab.live:5349?transport=tcp
             - name: WELCOME_FOOTER
               value: '"This server is running <a href=''https://docs.bigbluebutton.org/'''' target=''_blank''><u>BigBlueButton</u></a>."'
             - name: WELCOME_MESSAGE
