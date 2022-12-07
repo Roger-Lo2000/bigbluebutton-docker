@@ -24,7 +24,8 @@ spec:
       labels:
         io.kompose.service: nginx
     spec:
-      hostNetwork: false
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
         - image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-nginx:1.21-v4.0.0-v2.5.5
           name: nginx
