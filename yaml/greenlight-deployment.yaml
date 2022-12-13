@@ -23,6 +23,8 @@ spec:
       labels:
         io.kompose.service: greenlight
     spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
         - env:
             - name: ALLOW_GREENLIGHT_ACCOUNTS
@@ -85,7 +87,7 @@ spec:
             - name: ETHERPAD_API_KEY
               value: 1LeU6Do5DkpC8NWt8q4iyBCePO81PRIB6Rv1UvcA
             - name: EXTERNAL_IPv4
-              value: 31.80.142.158
+              value: 34.80.142.158
             - name: EXTERNAL_IPv6
             - name: FSESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
