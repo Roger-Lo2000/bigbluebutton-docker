@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - args:
-            - --external-ip=35.194.187.33/35.194.187.33
+            - --external-ip=34.80.142.158/34.80.142.158
             - --external-ip=::1/::1
             - --static-auth-secret=86b5SM4DJdbODf54AL6feE7bBIG7R5WD
           env:
