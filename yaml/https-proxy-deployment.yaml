@@ -27,7 +27,7 @@ spec:
       containers:
         - env:
             - name: ALLOWED_DOMAINS
-              value: test1000.mmlab.live
+              value: test.mmlab.live
           image: valian/docker-nginx-auto-ssl
           ports:
           - containerPort: 3000
