@@ -23,7 +23,10 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: postgres
+        app: postgres
     spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
         - env:
             - name: POSTGRES_DB
@@ -34,7 +37,7 @@ spec:
               value: postgres
           image: postgres:12-alpine
           ports:
-          - containerPort: 3000
+          - containerPort: 5432
           livenessProbe:
             exec:
               command:
