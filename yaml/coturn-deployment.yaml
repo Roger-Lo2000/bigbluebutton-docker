@@ -24,6 +24,7 @@ spec:
       labels:
         io.kompose.service: coturn
     spec:
+      hostNetwork: true
       containers:
         - args:
             - --external-ip=34.80.142.158/34.80.142.158
@@ -34,9 +35,12 @@ spec:
               value: "true"
           image: coturn/coturn:4.5-alpine
           ports:
-          - containerPort: 3000
+          - containerPort: 5349
           name: coturn
           resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsUser: 0
           volumeMounts:
             - mountPath: /etc/resty-auto-ssl
               name: ssl-data
