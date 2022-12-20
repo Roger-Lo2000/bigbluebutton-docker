@@ -24,13 +24,14 @@ spec:
       labels:
         io.kompose.service: https-proxy
     spec:
+      hostNetwork: true
       containers:
         - env:
             - name: ALLOWED_DOMAINS
               value: test.mmlab.live
           image: valian/docker-nginx-auto-ssl
-          ports:
-          - containerPort: 3000
+          #ports:
+          #- containerPort: 80
           name: https-proxy
           resources: {}
           volumeMounts:
