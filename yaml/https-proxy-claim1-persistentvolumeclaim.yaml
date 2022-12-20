@@ -6,6 +6,7 @@ metadata:
     io.kompose.service: https-proxy-claim1
   name: https-proxy-claim1
 spec:
+  storageClassName: local-storage
   accessModes:
     - ReadWriteOnce
   resources:

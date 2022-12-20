@@ -6,6 +6,7 @@ metadata:
     io.kompose.service: coturn-claim2
   name: coturn-claim2
 spec:
+  storageClassName: local-storage
   accessModes:
     - ReadWriteOnce
   resources:
