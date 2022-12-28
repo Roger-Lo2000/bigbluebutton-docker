@@ -22,9 +22,10 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: greenlight
+        app: greenlight
     spec:
-      hostNetwork: true
-      dnsPolicy: ClusterFirstWithHostNet
+#      hostNetwork: true
+#      dnsPolicy: ClusterFirstWithHostNet
       containers:
         - env:
             - name: ALLOW_GREENLIGHT_ACCOUNTS
