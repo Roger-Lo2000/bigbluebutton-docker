@@ -25,6 +25,7 @@ spec:
         io.kompose.service: https-proxy
     spec:
       hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
         - env:
             - name: ALLOWED_DOMAINS
