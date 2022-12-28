@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: ClusterIP
+  ports:
+  - port: 48087
+    protocol: TCP
+    targetPort: 48087
+  selector:
+    app: nginx
+  clusterIP: 10.111.83.0
