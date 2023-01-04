@@ -34,6 +34,9 @@ spec:
           #ports:
           #- containerPort: 80
           name: https-proxy
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsUser: 0
           resources: {}
           volumeMounts:
             - mountPath: /etc/resty-auto-ssl
