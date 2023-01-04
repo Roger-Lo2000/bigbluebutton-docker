@@ -25,6 +25,7 @@ spec:
         io.kompose.service: coturn
     spec:
       hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
         - args:
             - --external-ip=34.80.142.158/34.80.142.158
@@ -32,7 +33,11 @@ spec:
             - --static-auth-secret=86b5SM4DJdbODf54AL6feE7bBIG7R5WD
           env:
             - name: ENABLE_HTTPS_PROXY
-              value: "true"
+              value: "false"
+            - name: COTURN_TLS_CERT_PATH
+              value: /tmp/fullchain.pem
+            - name: COTURN_TLS_KEY_PATH
+              value: /tmp/privkey.pem
           image: coturn/coturn:4.5-alpine
           ports:
           - containerPort: 5349
@@ -48,6 +53,10 @@ spec:
               name: coturn-claim1
             - mountPath: /etc/coturn/turnserver.conf
               name: coturn-claim2
+            - mountPath: /tmp/cert.pem
+              name: cert-claim1
+            - mountPath: /tmp/key.pem
+              name: cert-claim2
       restartPolicy: Always
       volumes:
         - name: ssl-data
@@ -59,4 +68,10 @@ spec:
         - name: coturn-claim2
           persistentVolumeClaim:
             claimName: coturn-claim2
+        - name: cert-claim1
+          persistentVolumeClaim:
+            claimName: cert-claim1
+        - name: cert-claim2
+          persistentVolumeClaim:
+            claimName: cert-claim2
 status: {}
