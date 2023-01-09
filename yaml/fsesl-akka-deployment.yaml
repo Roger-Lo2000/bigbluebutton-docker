@@ -30,7 +30,7 @@ spec:
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
           image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-fsesl-akka:v2.5.5-230109
           ports:
-          - containerPort: 3000
+          - containerPort: 8021
           name: fsesl-akka
           resources: {}
       restartPolicy: Always
