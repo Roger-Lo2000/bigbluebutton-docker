@@ -23,6 +23,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: coturn
+        app: coturn
     spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
@@ -35,9 +36,9 @@ spec:
             - name: ENABLE_HTTPS_PROXY
               value: "false"
             - name: COTURN_TLS_CERT_PATH
-              value: /tmp/fullchain.pem
+              value: /tmp/cert.pem
             - name: COTURN_TLS_KEY_PATH
-              value: /tmp/privkey.pem
+              value: /tmp/key.pem
           image: coturn/coturn:4.5-alpine
           ports:
           - containerPort: 5349
