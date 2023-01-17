@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-exporter-service
+spec:
+  type: ClusterIP
+  ports:
+  - port: 9688
+    protocol: TCP
+    targetPort: 9688
+  selector:
+    app: prometheus-exporter
+  clusterIP: 10.111.83.33
