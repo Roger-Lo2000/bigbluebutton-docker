@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.27.0 (b0ed6a2c9)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: webhooks
+  name: webhooks
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: webhooks
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+        kompose.version: 1.27.0 (b0ed6a2c9)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/bbb-net: "true"
+        io.kompose.service: webhooks
+        label: webhooks
+    spec:
+      containers:
+        - env:
+            - name: DOMAIN
+              value: test.mmlab.live
+            - name: SHARED_SECRET
+              value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
+          image: aasia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-webhooks:v2.6.0
+          name: webhooks
+          ports:
+          - containerPort: 3005
+          resources: {}
+      restartPolicy: Always
+status: {}
