@@ -24,6 +24,7 @@ spec:
       labels:
         io.kompose.network/bbb-net: "true"
         io.kompose.service: prometheus-exporter
+        app: prometheus-exporter
     spec:
       containers:
         - env:
