@@ -10,6 +10,7 @@ metadata:
     app: greenlight
   name: greenlight
 spec:
+  type: LoadBalancer
   ports:
     - name: "5000"
       port: 5000
