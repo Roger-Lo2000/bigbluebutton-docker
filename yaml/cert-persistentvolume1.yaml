@@ -1,11 +1,14 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: cert-persistentvolume1
+  name: cert-pv1
   labels:
     type: local
 spec:
   storageClassName: local-storage
+  claimRef:
+    name: cert-claim1
+    namespace: default
   capacity:
     storage: 100Mi
   accessModes:

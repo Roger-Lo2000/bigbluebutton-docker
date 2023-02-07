@@ -1,11 +1,14 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: coturn-persistentvolume1
+  name: coturn-pv1
   labels:
     type: local
 spec:
   storageClassName: local-storage
+  claimRef:
+    name: coturn-claim1
+    namespace: default
   capacity:
     storage: 100Mi
   accessModes:

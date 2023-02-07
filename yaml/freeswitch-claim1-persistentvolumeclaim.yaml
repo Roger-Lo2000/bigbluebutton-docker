@@ -7,6 +7,7 @@ metadata:
   name: freeswitch-claim1
 spec:
   storageClassName: local-storage
+  volumeName: freeswitch-pv1
   accessModes:
     - ReadWriteOnce
   resources:

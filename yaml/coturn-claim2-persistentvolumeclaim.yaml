@@ -7,6 +7,7 @@ metadata:
   name: coturn-claim2
 spec:
   storageClassName: local-storage
+  volumeName: coturn-pv2
   accessModes:
     - ReadWriteOnce
   resources:

@@ -6,9 +6,10 @@ metadata:
     io.kompose.service: mongodb-claim1
   name: mongodb-claim1
 spec:
+  storageClassName: local-storage
+  volumeName: mongodb-pv1
   accessModes:
     - ReadWriteOnce
-  storageClassName: local-storage
   resources:
     requests:
       storage: 100Mi
