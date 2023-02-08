@@ -10,4 +10,4 @@ spec:
     targetPort: 6379
   selector:
     app: redis
-  clusterIP: 10.0.1.5
+  clusterIP: 5.1.0.5

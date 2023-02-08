@@ -10,4 +10,4 @@ spec:
     targetPort: 48087
   selector:
     app: nginx
-  clusterIP: 10.0.1.0
+  clusterIP: 5.1.0.0

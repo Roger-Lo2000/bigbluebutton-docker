@@ -10,4 +10,4 @@ spec:
     targetPort: 9001
   selector:
     app: etherpad
-  clusterIP: 10.0.1.4
+  clusterIP: 5.1.0.4

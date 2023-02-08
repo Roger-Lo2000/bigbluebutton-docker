@@ -10,4 +10,4 @@ spec:
     targetPort: 9688
   selector:
     app: prometheus-exporter
-  clusterIP: 10.0.1.33
+  clusterIP: 5.1.0.33

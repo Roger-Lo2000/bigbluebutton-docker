@@ -10,4 +10,4 @@ spec:
     targetPort: 27017
   selector:
     app: mongodb
-  clusterIP: 10.0.1.6
+  clusterIP: 5.1.0.6
