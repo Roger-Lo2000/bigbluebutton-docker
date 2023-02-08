@@ -28,7 +28,7 @@ spec:
         - env:
             - name: FSESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
-          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-fsesl-akka:v2.5.5-230109
+          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-fsesl-akka:v2.5.5-230208
           ports:
           - containerPort: 8021
           name: fsesl-akka
