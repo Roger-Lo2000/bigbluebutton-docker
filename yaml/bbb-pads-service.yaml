@@ -10,4 +10,4 @@ spec:
     targetPort: 3000
   selector:
     app: bbb-pads
-  clusterIP: 10.111.83.18
+  clusterIP: 10.0.1.18

@@ -10,4 +10,4 @@ spec:
     targetPort: 8021
   selector:
     app: fsesl-akka
-  clusterIP: 10.111.83.14
+  clusterIP: 10.0.1.14

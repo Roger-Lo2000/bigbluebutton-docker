@@ -10,4 +10,4 @@ spec:
     targetPort: 8090
   selector:
     app: bbb-web
-  clusterIP: 10.111.83.2
+  clusterIP: 10.0.1.2

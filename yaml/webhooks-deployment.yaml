@@ -31,7 +31,7 @@ spec:
               value: test.mmlab.live
             - name: SHARED_SECRET
               value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
-          image: aasia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-webhooks:v2.6.0
+          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-webhooks:v2.6.0
           name: webhooks
           ports:
           - containerPort: 3005

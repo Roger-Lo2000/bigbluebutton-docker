@@ -20,5 +20,5 @@ private:
   app:
     host: 0.0.0.0
   redis:
-    host: 10.111.83.5
+    host: 10.0.1.5
     port: '6379'

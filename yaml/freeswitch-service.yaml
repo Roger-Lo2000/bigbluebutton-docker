@@ -11,4 +11,4 @@ spec:
     targetPort: 8021
   selector:
     app: freeswitch
-  clusterIP: 10.111.83.1
+  clusterIP: 10.0.1.1

@@ -10,4 +10,4 @@ spec:
     targetPort: 3005
   selector:
     app: webhooks
-  clusterIP: 10.111.83.17
+  clusterIP: 10.0.1.17

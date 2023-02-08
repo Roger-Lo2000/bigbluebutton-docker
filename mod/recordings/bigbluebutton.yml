@@ -14,7 +14,7 @@ notes_formats:
   - etherpad
   - html
   - pdf
-redis_host: 10.111.83.5
+redis_host: 10.0.1.5
 redis_port: 6379
 # Uncomment and set password if redis require it.
 # redis_password: changeme
