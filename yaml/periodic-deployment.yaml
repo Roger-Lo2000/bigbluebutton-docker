@@ -33,7 +33,7 @@ spec:
               value: "3"
             - name: REMOVE_OLD_RECORDING
               value: "true"
-          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-periodic:v2.5.5-230208
+          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-periodic:v2.5.5-230209
           name: periodic
           ports:
           - containerPort: 3000

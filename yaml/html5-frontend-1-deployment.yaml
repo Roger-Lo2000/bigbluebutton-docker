@@ -52,7 +52,7 @@ spec:
               value: "true"
             - name: PORT
               value: "4100"
-          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-html5:v2.5.5-230208
+          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-html5:v2.5.5-230209
           ports:
           - containerPort: 4100
           name: html5-frontend-1

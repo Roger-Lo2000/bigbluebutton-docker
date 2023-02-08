@@ -28,7 +28,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-        - image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-nginx:v2.5.5-230208
+        - image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-nginx:v2.5.5-230209
           name: nginx
           ports:
           - containerPort: 7443
