@@ -6,9 +6,8 @@ metadata:
     io.kompose.service: ssl-data
   name: ssl-data
 spec:
-#  storageClassName: local-storage
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 100Mi
