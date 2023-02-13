@@ -1,11 +1,14 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongodb-persistentvolume0
+  name: mongodb-pv0
   labels:
     type: local
 spec:
   storageClassName: local-storage
+  claimRef:
+    name: mongodb-claim0
+    namespace: default
   capacity:
     storage: 100Mi
   accessModes:

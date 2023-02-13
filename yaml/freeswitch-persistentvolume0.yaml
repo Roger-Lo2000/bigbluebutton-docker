@@ -1,11 +1,14 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: freeswitch-persistentvolume0
+  name: freeswitch-pv0
   labels:
     type: local
 spec:
   storageClassName: local-storage
+  claimRef:
+    name: freeswitch-claim0
+    namespace: default
   capacity:
     storage: 100Mi
   accessModes:
