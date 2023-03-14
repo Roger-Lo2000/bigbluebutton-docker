@@ -11,4 +11,4 @@ spec:
     targetPort: 3008
   selector:
     app: webrtc-sfu
-  clusterIP: 5.1.0.10
+  clusterIP: 5.1.0.40
