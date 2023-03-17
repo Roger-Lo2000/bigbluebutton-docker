@@ -29,7 +29,7 @@ spec:
         - env:
             - name: ETHERPAD_API_KEY
               value: 1LeU6Do5DkpC8NWt8q4iyBCePO81PRIB6Rv1UvcA
-          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-pads:v2.5.5-230209
+          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-pads:v2.5.5
           ports:
           - containerPort: 3000
           name: bbb-pads

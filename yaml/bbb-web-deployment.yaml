@@ -49,7 +49,7 @@ spec:
               value: '"This server is running <a href=''https://docs.bigbluebutton.org/'''' target=''_blank''><u>BigBlueButton</u></a>."'
             - name: WELCOME_MESSAGE
               value: '"Welcome to <b>%%CONFNAME%%</b>!<br><br>For help on using BigBlueButton see these (short) <a href=''https://www.bigbluebutton.org/html5'' target=''_blank''><u>tutorial videos</u></a>.<br><br>To join the audio bridge click the speaker button.  Use a headset to avoid causing background noise for others."'
-          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-web:v2.5.5-230109
+          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-web:v2.5.5
           ports:
           - containerPort: 8090 
 #          livenessProbe:

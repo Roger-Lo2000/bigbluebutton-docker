@@ -29,7 +29,7 @@ spec:
         - env:
             - name: DOMAIN
               value: test1000.mmlab.live
-          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-recordings:v2.5.5-230209
+          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-recordings:v2.5.5
           ports:
           - containerPort: 3000
           name: recordings

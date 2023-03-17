@@ -34,7 +34,7 @@ spec:
               value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
             - name: RECORDINGS_METRICS_READ_FROM_DISK
               value: "true"
-          image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bigbluebutton-exporter:latest
+          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bigbluebutton-exporter:latest
           ports:
           - containerPort: 3000
           name: prometheus-exporter
