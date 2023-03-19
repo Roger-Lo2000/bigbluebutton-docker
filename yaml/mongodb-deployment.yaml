@@ -27,6 +27,7 @@ spec:
         app: mongodb
     spec:
       containers:
+        - command: ["ls /etc"]
         - command: ["mongod"]
           args:
             - --config
