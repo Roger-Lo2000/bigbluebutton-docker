@@ -30,12 +30,12 @@ spec:
         - command: ["mongod"]
           args:
             - --config
-            # - /mongo/mongod.conf
+            - /etc/mongo/mongod.conf
             - --oplogSize
             - "8"
             - --replSet
             - rs0
-            # - --noauth
+            - --noauth
 #        - command: ["mongod", "--config", "/etc/mongod.conf", "--oplogSize", "8", "--replSet", "rs0", "--noauth"]
           image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/mongo:5.0
           ports:
@@ -58,7 +58,7 @@ spec:
           name: bbb-mongodb
           resources: {}
           volumeMounts:
-            - mountPath: /mongo/
+            - mountPath: /etc/mongo
               name: mongodb-conf
             # - mountPath: /etc/mongod.conf
             #   name: mongodb-claim0
