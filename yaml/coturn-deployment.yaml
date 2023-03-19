@@ -39,7 +39,7 @@ spec:
               value: /tmp/cert.pem
             - name: COTURN_TLS_KEY_PATH
               value: /tmp/key.pem
-          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/cotorn:4.5-alpine
+          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/coturn:4.5-alpine
           ports:
           - containerPort: 5349
           name: coturn

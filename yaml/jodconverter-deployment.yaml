@@ -26,7 +26,7 @@ spec:
         app: jodconverter
     spec:
       containers:
-        - image: asia-east1-docker.pkg.dev/mplus-video-conference/mplus/bbb-k8s-jodconverter:v2.5.5
+        - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-jodconverter:v2.5.5
           ports:
           - containerPort: 3000
           name: jodconverter
