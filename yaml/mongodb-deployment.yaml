@@ -30,7 +30,7 @@ spec:
         - command: ["mongod"]
           args:
             - --config
-            - /etc/mongo/mongod.conf
+            - /etc/mongod.conf
             - --oplogSize
             - "8"
             - --replSet
@@ -58,7 +58,7 @@ spec:
           name: bbb-mongodb
           resources: {}
           volumeMounts:
-            - mountPath: /etc/mongo
+            - mountPath: "/etc"
               name: mongodb-conf
             # - mountPath: /etc/mongod.conf
             #   name: mongodb-claim0
@@ -73,6 +73,7 @@ spec:
         - name: mongodb-conf
           hostPath:
             path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo
+
         # - name: mongodb-claim0
         #   persistentVolumeClaim:
         #     claimName: mongodb-claim0
