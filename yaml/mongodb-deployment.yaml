@@ -27,11 +27,10 @@ spec:
         app: mongodb
     spec:
       containers:
-        - command: ["ls /etc"]
         - command: ["mongod"]
           args:
             - --config
-            - /etc/mongo/mongod.conf
+            - /etc/mongod.conf
             - --oplogSize
             - "8"
             - --replSet
@@ -59,7 +58,7 @@ spec:
           name: bbb-mongodb
           resources: {}
           volumeMounts:
-            - mountPath: /etc/mongo
+            - mountPath: /etc/
               name: mongodb-conf
             # - mountPath: /etc/mongod.conf
             #   name: mongodb-claim0
