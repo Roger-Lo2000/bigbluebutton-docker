@@ -14,4 +14,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/mod/mongo/" # mongod.conf"
+    path: "/home/mod/mongo" # mongod.conf"
