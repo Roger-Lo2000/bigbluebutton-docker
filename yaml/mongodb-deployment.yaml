@@ -58,22 +58,22 @@ spec:
           name: bbb-mongodb
           resources: {}
           volumeMounts:
-            - mountPath: /etc/mongod.conf
-              name: mongodb-claim0
-            - mountPath: /docker-entrypoint-initdb.d/init-replica.sh
-              name: mongodb-claim1
+            # - mountPath: /etc/mongod.conf
+            #   name: mongodb-claim0
+            # - mountPath: /docker-entrypoint-initdb.d/init-replica.sh
+            #   name: mongodb-claim1
             - mountPath: /data/configdb
               name: mongodb-tmpfs0
             - mountPath: /data/db
               name: mongodb-tmpfs1
       restartPolicy: Always
       volumes:
-        - name: mongodb-claim0
-          persistentVolumeClaim:
-            claimName: mongodb-claim0
-        - name: mongodb-claim1
-          persistentVolumeClaim:
-            claimName: mongodb-claim1
+        # - name: mongodb-claim0
+        #   persistentVolumeClaim:
+        #     claimName: mongodb-claim0
+        # - name: mongodb-claim1
+        #   persistentVolumeClaim:
+        #     claimName: mongodb-claim1
         - emptyDir:
             medium: Memory
           name: mongodb-tmpfs0
