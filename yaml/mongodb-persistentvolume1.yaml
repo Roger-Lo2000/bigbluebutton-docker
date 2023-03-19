@@ -14,4 +14,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/mod/mongo/init-replica.sh"
+    path: "/home/mod/mongo/" # init-replica.sh"
