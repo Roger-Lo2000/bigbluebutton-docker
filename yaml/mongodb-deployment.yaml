@@ -60,7 +60,6 @@ spec:
           volumeMounts:
             - mountPath: /etc/mongo
               name: mongodb-conf
-              readonly: true
 
             # - mountPath: /etc/mongod.conf
             #   name: mongodb-claim0
