@@ -35,7 +35,7 @@ spec:
             - "8"
             - --replSet
             - rs0
-            - --noauth
+            # - --noauth
 #        - command: ["mongod", "--config", "/etc/mongod.conf", "--oplogSize", "8", "--replSet", "rs0", "--noauth"]
           image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/mongo:5.0
           ports:
