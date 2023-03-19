@@ -27,11 +27,10 @@ spec:
         app: mongodb
     spec:
       containers:
-
         - command: ["mongod"]
           args:
             - --config
-            - /etc/mongod.conf
+            - /etc/mongo/mongod.conf
             - --oplogSize
             - "8"
             - --replSet
@@ -59,6 +58,8 @@ spec:
           name: bbb-mongodb
           resources: {}
           volumeMounts:
+            - mountPath: /etc
+              name: mongodb-conf
             # - mountPath: /etc/mongod.conf
             #   name: mongodb-claim0
             # - mountPath: /docker-entrypoint-initdb.d/init-replica.sh
@@ -69,8 +70,9 @@ spec:
               name: mongodb-tmpfs1
       restartPolicy: Always
       volumes:
-        - ./mod/mongo/mongod.conf:/etc/mongod.conf
-        - ./mod/mongo/init-replica.sh:/docker-entrypoint-initdb.d/init-replica.sh
+        - name: mongodb-conf
+          hostPath:
+            path: ./mod/mongo
         # - name: mongodb-claim0
         #   persistentVolumeClaim:
         #     claimName: mongodb-claim0
