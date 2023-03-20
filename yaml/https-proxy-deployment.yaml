@@ -29,8 +29,8 @@ spec:
       containers:
         - env:
             - name: ALLOWED_DOMAINS
-              value: test.mmlab.live
-          image: valian/docker-nginx-auto-ssl
+              value: test.mmlab.online
+          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/docker-nginx-auto-ssl:modify
           #ports:
           #- containerPort: 80
           name: https-proxy
@@ -41,14 +41,14 @@ spec:
           volumeMounts:
             - mountPath: /etc/resty-auto-ssl
               name: ssl-data
-            - mountPath: /etc/nginx/conf.d/bbb-docker.conf
-              name: https-proxy-claim1
+            # - mountPath: /etc/nginx/conf.d/bbb-docker.conf
+            #   name: https-proxy-claim1
       restartPolicy: Always
       volumes:
         - name: ssl-data
           persistentVolumeClaim:
             claimName: ssl-data
-        - name: https-proxy-claim1
-          persistentVolumeClaim:
-            claimName: https-proxy-claim1
+        # - name: https-proxy-claim1
+        #   persistentVolumeClaim:
+        #     claimName: https-proxy-claim1
 status: {}
