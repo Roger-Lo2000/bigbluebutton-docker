@@ -21,15 +21,12 @@ spec:
         volumeMounts:
           - name: mongodb-dir  
             mountPath: /etc/mongo/
-            subpath: mongod.conf
           # - name: mongodb-conf   
           #   mountPath: /etc/mongo/mongod.conf
       volumes:
         - name: mongodb-dir
           hostPath:
             path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo/
-            subpath: mongod.conf
-            # type: DirectoryOrCreate
         # - name: mongodb-conf
         #   hostPath:
         #     path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo/mongod.conf
