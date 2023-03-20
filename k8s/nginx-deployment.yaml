@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 2 # tells deployment to run 2 pods matching the template
+  replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
@@ -20,15 +20,17 @@ spec:
 ## guess the following code mount the G:\code\k8s\conf dir to container /etc/mongo conf
         volumeMounts:
           - name: mongodb-dir  
-            mountPath: /etc/mongo/
-          - name: mongodb-conf   
             mountPath: /etc/mongo/mongod.conf
+            subpath: mongod.conf
+          # - name: mongodb-conf   
+          #   mountPath: /etc/mongo/mongod.conf
       volumes:
         - name: mongodb-dir
           hostPath:
             path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo/
-            type: DirectoryOrCreate
-        - name: mongodb-conf
-          hostPath:
-            path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo/mongod.conf
-            type: File
+            subpath: mongod.conf
+            # type: DirectoryOrCreate
+        # - name: mongodb-conf
+        #   hostPath:
+        #     path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo/mongod.conf
+        #     type: File
