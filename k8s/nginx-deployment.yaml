@@ -19,10 +19,10 @@ spec:
         - containerPort: 80
 ## guess the following code mount the G:\code\k8s\conf dir to container /etc/mongo conf
         volumeMounts:
-          - mountPath: /etc/mongo
+          - mountPath: /etc/cofff
             name: mongodb-conf  
       volumes:
         - name: mongodb-conf
           hostPath:
-            path: /home/m11007312_gcp/bigbluebutton-docker/k8s/conf
+            path: /home/m11007312_gcp/bigbluebutton-docker/k8s/confff
         
