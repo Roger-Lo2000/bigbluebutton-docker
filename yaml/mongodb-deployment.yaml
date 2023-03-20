@@ -83,7 +83,7 @@ spec:
         # - name: mongodb-claim1
         #   persistentVolumeClaim:
         #     claimName: mongodb-claim1
-        # kubectl cp mod/mongo/mongod.conf default/podname/:/etc/mongod.conf
+        # kubectl cp mod/mongo/mongod.conf default/mongodb-7fdd8b45d-zq56s/:/etc/mongod.conf
         
         - emptyDir:
             medium: Memory
