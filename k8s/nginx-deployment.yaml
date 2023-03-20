@@ -20,7 +20,7 @@ spec:
 ## guess the following code mount the G:\code\k8s\conf dir to container /etc/mongo conf
         volumeMounts:
           - name: mongodb-dir  
-            mountPath: /etc/mongo/mongod.conf
+            mountPath: /etc/mongo/
             subpath: mongod.conf
           # - name: mongodb-conf   
           #   mountPath: /etc/mongo/mongod.conf
