@@ -63,6 +63,10 @@ spec:
             - name: mongodb-conf   
               mountPath: /etc/mongo/mongod.conf
 
+            - name: init-dir  
+              mountPath: /docker-entrypoint-initdb.d/
+            - name: init-sh   
+              mountPath: /docker-entrypoint-initdb.d/init-replica.sh
             # - mountPath: /etc/mongod.conf
             #   name: mongodb-claim0
             # - mountPath: /docker-entrypoint-initdb.d/init-replica.sh
@@ -85,6 +89,14 @@ spec:
             path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo/mongod.conf
             type: FileOrCreate
 
+        - name: init-dir
+          hostPath:
+            path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo/
+            type: DirectoryOrCreate
+        - name: init-sh  
+          hostPath:
+            path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo/init-replica.sh
+            type: FileOrCreate
         # - name: mongodb-claim0
         #   persistentVolumeClaim:
         #     claimName: mongodb-claim0
