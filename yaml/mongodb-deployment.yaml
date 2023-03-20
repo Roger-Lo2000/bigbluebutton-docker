@@ -58,8 +58,8 @@ spec:
           name: bbb-mongodb
           resources: {}
           volumeMounts:
-            # - mountPath: /etc/mongo
-            #   name: mongodb-conf
+          - name: mongodb-conf   
+            mountPath: /etc/mongo/mongod.conf
 
             # - mountPath: /etc/mongod.conf
             #   name: mongodb-claim0
@@ -73,9 +73,9 @@ spec:
 
       restartPolicy: Always
       volumes:
-      #   - name: mongodb-conf
-      #     hostPath:
-      #       path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo
+        - name: mongodb-conf
+          hostPath:
+            path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo/mongod.conf
 
         # - name: mongodb-claim0
         #   persistentVolumeClaim:
