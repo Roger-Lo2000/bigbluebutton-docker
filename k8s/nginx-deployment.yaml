@@ -19,8 +19,9 @@ spec:
         - containerPort: 80
 ## guess the following code mount the G:\code\k8s\conf dir to container /etc/mongo conf
         volumeMounts:
-          - mountPath: /etc/cofff
-            name: mongodb-conf  
+          - name: mongodb-conf   
+            mountPath: /etc/confff
+            
       volumes:
         - name: mongodb-conf
           hostPath:
