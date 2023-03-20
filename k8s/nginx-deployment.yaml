@@ -20,10 +20,9 @@ spec:
 ## guess the following code mount the G:\code\k8s\conf dir to container /etc/mongo conf
         volumeMounts:
           - name: mongodb-conf   
-            mountPath: /etc/confff
-            
+            mountPath: /etc/confff/mongo.conf          
       volumes:
         - name: mongodb-conf
           hostPath:
-            path: /home/m11007312_gcp/bigbluebutton-docker/k8s/confff
+            path: /home/m11007312_gcp/bigbluebutton-docker/k8s/confff/mongod.conf
         
