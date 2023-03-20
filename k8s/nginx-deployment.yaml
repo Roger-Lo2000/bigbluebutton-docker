@@ -31,4 +31,4 @@ spec:
         - name: mongodb-conf
           hostPath:
             path: /home/m11007312_gcp/bigbluebutton-docker/mod/mongo/mongod.conf
-            type: FileOrCreate
+            type: File
