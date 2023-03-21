@@ -27,16 +27,18 @@ spec:
         app: mongodb
     spec:
       containers:
-        - command: ["mongod"]
+        # - command: ["mongod"]
+        #   args:
+        #     - --config
+        #     - /etc/mongo/mongod.conf
+        #     - --oplogSize
+        #     - "8"
+        #     - --replSet
+        #     - rs0
+        #     - --noauth
+        - command: ["bash"]
           args:
-            - --config
-            - /etc/mongo/mongod.conf
-            - --oplogSize
-            - "8"
-            - --replSet
-            - rs0
-            - --noauth
-        # - command: ["bash", "--/init-replica.sh"]
+            - /init-replica.sh
 #        - command: ["mongod", "--config", "/etc/mongod.conf", "--oplogSize", "8", "--replSet", "rs0", "--noauth"]
           image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/mongo:5.0-modify-2
           ports:
