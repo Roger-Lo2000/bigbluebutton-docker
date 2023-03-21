@@ -27,16 +27,8 @@ spec:
         app: mongodb
     spec:
       containers:
-        # - command: ["mongod"]
-        #   args:
-        #     - --config
-        #     - /etc/mongo/mongod.conf
-        #     - --oplogSize
-        #     - "8"
-        #     - --replSet
-        #     - rs0
-        #     - --noauth
         - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/mongo:5.0-modify-3
+          # doesn't work , don't know why yet.
           command: ["bash"]
           args: ["/init-replica.sh"]
           ports:
@@ -46,20 +38,6 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: status.podIP
-#          - name: MONGO_INITDB_ROOT_USERNAME
-#            valueFrom:
-#               secretKeyRef:
-#                name: mongodb-secret
-#                key: mongo-root-username
-#          - name: MONGO_INITDB_ROOT_PASSWORD
-#            valueFrom:
-#               secretKeyRef:
-#                name: mongodb-secret
-#                key: mongo-root-password
-#          livenessProbe:
-#            exec:
-#              command:
-#                - bash -c "if mongo --eval 'quit(db.runCommand({ ping':' 1 }).ok ? 0 ':' 2)'; then exit 0; fi; exit 1;"
           name: bbb-mongodb
           resources: {}
           volumeMounts:
@@ -70,13 +48,7 @@ spec:
 
       restartPolicy: Always
 
-      volumes:
-        # - name: mongodb-claim0
-        #   persistentVolumeClaim:
-        #     claimName: mongodb-claim0
-        # - name: mongodb-claim1
-        #   persistentVolumeClaim:
-        #     claimName: mongodb-claim1        
+      volumes:     
         - emptyDir:
             medium: Memory
           name: mongodb-tmpfs0
