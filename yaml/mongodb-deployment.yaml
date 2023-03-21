@@ -36,9 +36,9 @@ spec:
         #     - --replSet
         #     - rs0
         #     - --noauth
-        - command: ["bash"]
+        - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/mongo:5.0-modify-3
+          command: ["bash"]
           args: ["/init-replica.sh"]
-          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/mongo:5.0-modify-3
           ports:
           - containerPort: 27017
           env:
