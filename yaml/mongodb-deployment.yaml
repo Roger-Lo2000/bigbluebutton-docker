@@ -45,8 +45,8 @@ spec:
               name: mongodb-tmpfs0
             - mountPath: /data/db
               name: mongodb-tmpfs1
-            # - mountPath: /data/conf
-            #   name: config
+            - mountPath: /data/conf
+              name: config-volume
       restartPolicy: Always
 
       volumes:     
@@ -56,11 +56,9 @@ spec:
         - emptyDir:
             medium: Memory
           name: mongodb-tmpfs1
+          
+        - name: config-volume
+          configMap:
+            name: config
 
-        # - name: config
-        #   configMap:
-        #     name: mongo-config
-        #     items:
-        #     - key: mongo-config
-        #       path: mongod.conf
 status: {}
