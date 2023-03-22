@@ -45,6 +45,8 @@ spec:
               name: mongodb-tmpfs0
             - mountPath: /data/db
               name: mongodb-tmpfs1
+            - mountPath: /data/conf
+              name: game-config
 
       restartPolicy: Always
 
@@ -55,4 +57,7 @@ spec:
         - emptyDir:
             medium: Memory
           name: mongodb-tmpfs1
+        - name: game-config
+          configMap:
+            name: game-config
 status: {}
