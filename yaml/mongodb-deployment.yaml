@@ -46,7 +46,7 @@ spec:
             - mountPath: /data/db
               name: mongodb-tmpfs1
 
-            - mountPath: /data/config
+            - mountPath: /mod
               name: config-volume
       restartPolicy: Always
 
