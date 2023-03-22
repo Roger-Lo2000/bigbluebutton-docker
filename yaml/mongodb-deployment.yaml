@@ -57,7 +57,11 @@ spec:
         - emptyDir:
             medium: Memory
           name: mongodb-tmpfs1
+
         - name: mongo-config
           configMap:
             name: mongo-config
+            items:
+              - key: mongo-config
+                path: mongod.conf
 status: {}
