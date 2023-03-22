@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: special-config
+  name: mongo-config
   namespace: default
 data:
-  --from-file: ./mod/mongo
+  mongo-config: ./mod/mongo
