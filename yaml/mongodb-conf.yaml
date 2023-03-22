@@ -4,4 +4,3 @@ metadata:
   name: mongodb-config
 data:
   mongodb-config: ""
-EOF
