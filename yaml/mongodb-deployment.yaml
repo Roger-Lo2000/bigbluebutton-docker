@@ -27,7 +27,7 @@ spec:
         app: mongodb
     spec:
       containers:
-        - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/mongo:5.0-modify-3
+        - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/mongo:5.0-modify-4
           # doesn't work , don't know why yet.
           command: ["bash"]
           args: ["/init-replica.sh"]
