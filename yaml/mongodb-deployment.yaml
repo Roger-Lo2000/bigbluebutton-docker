@@ -45,7 +45,8 @@ spec:
               name: mongodb-tmpfs0
             - mountPath: /data/db
               name: mongodb-tmpfs1
-            - mountPath: /data/conf
+              
+            - mountPath: /data/config
               name: config-volume
       restartPolicy: Always
 
@@ -56,7 +57,7 @@ spec:
         - emptyDir:
             medium: Memory
           name: mongodb-tmpfs1
-          
+
         - name: config-volume
           configMap:
             name: config
