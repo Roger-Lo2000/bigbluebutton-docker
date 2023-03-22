@@ -41,7 +41,7 @@ spec:
           volumeMounts:
             - mountPath: /etc/resty-auto-ssl
               name: ssl-data
-            - mountPath: /mod
+            - mountPath: /data/config
               name: config-volume
 
       restartPolicy: Always
