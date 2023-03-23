@@ -43,9 +43,9 @@ spec:
               name: periodic-claim0
             - mountPath: /var/bigbluebutton
               name: bigbluebutton
-            # - mountPath: /var/mediasoup
-            #   name: vol-mediasoup
-            # - mountPath: /var/log/bigbluebutton
+            - mountPath: /var/mediasoup
+              name: vol-mediasoup
+            - mountPath: /var/log/bigbluebutton
               name: periodic-tmpfs0
       restartPolicy: Always
       volumes:
@@ -55,9 +55,9 @@ spec:
         - name: bigbluebutton
           persistentVolumeClaim:
             claimName: bigbluebutton
-        # - name: vol-mediasoup
-        #   persistentVolumeClaim:
-        #     claimName: vol-mediasoup
+        - name: vol-mediasoup
+          persistentVolumeClaim:
+            claimName: vol-mediasoup
         - emptyDir:
             medium: Memory
           name: periodic-tmpfs0
