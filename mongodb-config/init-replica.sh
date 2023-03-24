@@ -3,7 +3,7 @@ echo "start init"
 mongod --pidfilepath /tmp/docker-entrypoint-temp-mongod.pid --shutdown
 
 mongod --oplogSize 8 --replSet rs0 --noauth \
-   --config /etc/mongo/mongod.conf \
+   --config /data/config/mongod.conf \
    --bind_ip 0.0.0.0 --port 27017 \
    --tlsMode disabled \
    --logpath /proc/1/fd/1 --logappend \
