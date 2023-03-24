@@ -1,5 +1,6 @@
 #!/bin/sh
 echo "start init"
+sleep 3
 mongod --oplogSize 8 --replSet rs0 --noauth \
    --config /data/config/mongod.conf \
    --bind_ip 0.0.0.0 --port 27017 \
