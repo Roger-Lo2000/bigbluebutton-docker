@@ -28,7 +28,6 @@ spec:
     spec:
       containers:
         - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/mongo:5.0-modify-5
-          # doesn't work , don't know why yet.
           command: ["bash"]
           args: ["/data/config/init-replica.sh"]
           ports:
