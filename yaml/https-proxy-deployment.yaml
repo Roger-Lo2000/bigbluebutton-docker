@@ -44,7 +44,7 @@ spec:
               name: ssl-data
 
             - mountPath: /data/config
-              name: https-proxy
+              name: https-proxy-volume
 
       restartPolicy: Always
       volumes:
@@ -52,8 +52,8 @@ spec:
           persistentVolumeClaim:
             claimName: ssl-data
 
-        - name: https-proxy
+        - name: https-proxy-volume
           configMap:
-            name: config
+            name: https-proxy
 
 status: {}
