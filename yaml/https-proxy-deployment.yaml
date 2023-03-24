@@ -30,7 +30,7 @@ spec:
         - env:
             - name: ALLOWED_DOMAINS
               value: test.mmlab.online
-          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/docker-nginx-auto-ssl:modify
+          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/docker-nginx-auto-ssl
           #ports:
           #- containerPort: 80
           name: https-proxy
