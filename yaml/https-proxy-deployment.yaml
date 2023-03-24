@@ -43,7 +43,7 @@ spec:
             - mountPath: /etc/resty-auto-ssl
               name: ssl-data
 
-            - mountPath: /data/config
+            - mountPath: /etc/nginx/conf.d/
               name: https-proxy-volume
 
       restartPolicy: Always
