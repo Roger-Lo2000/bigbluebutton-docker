@@ -42,8 +42,8 @@ spec:
           volumeMounts:
             - mountPath: /etc/resty-auto-ssl
               name: ssl-data
-            - mountPath: /data/config
-              name: config-volume
+            # - mountPath: /data/config
+            #   name: config-volume
 
       restartPolicy: Always
       volumes:
@@ -51,8 +51,8 @@ spec:
           persistentVolumeClaim:
             claimName: ssl-data
 
-        - name: config-volume
-          configMap:
-            name: config
+        # - name: config-volume
+        #   configMap:
+        #     name: config
 
 status: {}
