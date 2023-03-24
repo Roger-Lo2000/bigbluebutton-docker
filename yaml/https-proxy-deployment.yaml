@@ -42,8 +42,9 @@ spec:
           volumeMounts:
             - mountPath: /etc/resty-auto-ssl
               name: ssl-data
-            # - mountPath: /etc/nginx/conf.d/bbb-docker.conf
-            #   name: https-proxy-claim1
+
+            - mountPath: /data/config
+              name: https-proxy
 
       restartPolicy: Always
       volumes:
@@ -51,8 +52,8 @@ spec:
           persistentVolumeClaim:
             claimName: ssl-data
 
-        # - name: https-proxy-claim1
-        #   persistentVolumeClaim:
-        #     claimName: https-proxy-claim1
+        - name: https-proxy
+          configMap:
+            name: config
 
 status: {}
