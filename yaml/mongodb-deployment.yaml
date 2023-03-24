@@ -30,7 +30,7 @@ spec:
         - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/mongo:5.0-modify-5
           # doesn't work , don't know why yet.
           command: ["bash"]
-          args: ["/init-replica.sh"]
+          args: ["/data/config/init-replica.sh"]
           ports:
           - containerPort: 27017
           env:
@@ -47,7 +47,7 @@ spec:
               name: mongodb-tmpfs1
 
             - mountPath: /data/config
-              name: config-volume
+              name: mongodb-config-volume
       restartPolicy: Always
 
       volumes:     
@@ -58,8 +58,8 @@ spec:
             medium: Memory
           name: mongodb-tmpfs1
 
-        - name: config-volume
+        - name: mongodb-config-volume
           configMap:
-            name: config
+            name: mongodb-config
 
 status: {}
