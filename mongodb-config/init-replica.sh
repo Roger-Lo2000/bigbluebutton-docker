@@ -1,7 +1,5 @@
 #!/bin/sh
 echo "start init"
-mongod --pidfilepath /tmp/docker-entrypoint-temp-mongod.pid --shutdown
-
 mongod --oplogSize 8 --replSet rs0 --noauth \
    --config /data/config/mongod.conf \
    --bind_ip 0.0.0.0 --port 27017 \
