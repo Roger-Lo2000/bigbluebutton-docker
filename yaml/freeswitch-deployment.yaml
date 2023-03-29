@@ -103,19 +103,20 @@ spec:
                 - SYS_RESOURCE
           volumeMounts:
             - mountPath: /etc/freeswitch/sip_profiles/external
-              name: freeswitch-claim0
+              name: freeswitch-config2-volume
+            
             - mountPath: /etc/freeswitch/dialplan/public_docker
-              name: freeswitch-claim1
+              name: freeswitch-config1-volume
             - mountPath: /var/freeswitch/meetings
               name: vol-freeswitch
       restartPolicy: Always
       volumes:
-        - name: freeswitch-claim0
-          persistentVolumeClaim:
-            claimName: freeswitch-claim0
-        - name: freeswitch-claim1
-          persistentVolumeClaim:
-            claimName: freeswitch-claim1
+        - name: freeswitch-config2-volume
+          configMap:
+            claimName: freeswitch-config2
+        - name: freeswitch-config1-volume
+          configMap:
+            claimName: freeswitch-config1
         - name: vol-freeswitch
           persistentVolumeClaim:
             claimName: vol-freeswitch
