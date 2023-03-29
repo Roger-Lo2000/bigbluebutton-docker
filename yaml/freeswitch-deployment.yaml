@@ -113,10 +113,11 @@ spec:
       volumes:
         - name: freeswitch-config2-volume
           configMap:
-            claimName: freeswitch-config2
+            name: freeswitch-config2
         - name: freeswitch-config1-volume
           configMap:
-            claimName: freeswitch-config1
+            nameame: freeswitch-config1
+
         - name: vol-freeswitch
           persistentVolumeClaim:
             claimName: vol-freeswitch
