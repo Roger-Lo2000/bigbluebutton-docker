@@ -23,4 +23,4 @@ spec:
       volumes:
         - name: bigbluebutton
           persistentVolumeClaim:
-            claimName: bigbluebutton
+            claimName: bigbluebutton-claim
