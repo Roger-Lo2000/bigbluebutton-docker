@@ -39,8 +39,8 @@ spec:
             - mountPath: /html5-static
               name: html5-static
               readOnly: true
-            - mountPath: /www/default.pdf
-              name: nginx-claim2
+            # - mountPath: /www/default.pdf
+            #   name: nginx-claim2
       restartPolicy: Always
       volumes:
         - name: bigbluebutton
@@ -50,7 +50,7 @@ spec:
           persistentVolumeClaim:
             claimName: html5-static
             readOnly: true
-        - name: nginx-claim2
-          persistentVolumeClaim:
-            claimName: nginx-claim2
+        # - name: nginx-claim2
+        #   persistentVolumeClaim:
+        #     claimName: nginx-claim2
 status: {}
