@@ -4,10 +4,11 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: bigbluebutton
-  name: bigbluebutton
+  name: bigbluebutton-claim
 spec:
   accessModes:
     - ReadWriteOnce
+  volumeName: bigbluebutton
   resources:
     requests:
       storage: 100Mi

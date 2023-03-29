@@ -52,9 +52,9 @@ spec:
         - name: periodic-claim0
           persistentVolumeClaim:
             claimName: periodic-claim0
-        # - name: bigbluebutton
-        #   persistentVolumeClaim:
-        #     claimName: bigbluebutton
+        - name: bigbluebutton
+          persistentVolumeClaim:
+            claimName: bigbluebutton
         # - name: vol-mediasoup
         #   persistentVolumeClaim:
         #     claimName: vol-mediasoup
