@@ -34,22 +34,22 @@ spec:
           - containerPort: 7443
           resources: {}
           volumeMounts:
-            - mountPath: /var/bigbluebutton
-              name: bigbluebutton
-            - mountPath: /html5-static
-              name: html5-static
-              readOnly: true
+            # - mountPath: /var/bigbluebutton
+            #   name: bigbluebutton
+            # - mountPath: /html5-static
+            #   name: html5-static
+            #   readOnly: true
             # - mountPath: /www/default.pdf
             #   name: nginx-claim2
       restartPolicy: Always
       volumes:
-        - name: bigbluebutton
-          persistentVolumeClaim:
-            claimName: bigbluebutton
-        - name: html5-static
-          persistentVolumeClaim:
-            claimName: html5-static
-            readOnly: true
+        # - name: bigbluebutton
+        #   persistentVolumeClaim:
+        #     claimName: bigbluebutton
+        # - name: html5-static
+        #   persistentVolumeClaim:
+        #     claimName: html5-static
+        #     readOnly: true
         # - name: nginx-claim2
         #   persistentVolumeClaim:
         #     claimName: nginx-claim2
