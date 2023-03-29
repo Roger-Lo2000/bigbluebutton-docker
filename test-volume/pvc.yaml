@@ -4,7 +4,7 @@ metadata:
   name: bigbluebutton-claim
 spec:
   accessModes:
-    - ReadOnlyMany
+    - ReadOnlyOnce
   resources:
     requests:
       storage: 1Gi
