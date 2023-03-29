@@ -8,7 +8,6 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  volumeName: bigbluebutton
   resources:
     requests:
       storage: 100Mi

@@ -54,10 +54,10 @@ spec:
             claimName: periodic-claim0
         - name: bigbluebutton
           persistentVolumeClaim:
-            claimName: bigbluebutton
+            claimName: bigbluebutton-claim
         - name: vol-mediasoup
           persistentVolumeClaim:
-            claimName: vol-mediasoup
+            claimName: vol-mediasoup-claim
         - emptyDir:
             medium: Memory
           name: periodic-tmpfs0
