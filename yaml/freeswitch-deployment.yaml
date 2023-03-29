@@ -116,7 +116,7 @@ spec:
             name: freeswitch-config2
         - name: freeswitch-config1-volume
           configMap:
-            nameame: freeswitch-config1
+            name: freeswitch-config1
 
         - name: vol-freeswitch
           persistentVolumeClaim:
