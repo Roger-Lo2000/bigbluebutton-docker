@@ -39,25 +39,29 @@ spec:
           - containerPort: 3000
           resources: {}
           volumeMounts:
-            - mountPath: /var/run/docker.sock
-              name: periodic-claim0
+            # - mountPath: /var/run/docker.sock
+            #   name: periodic-claim0
+            
             - mountPath: /var/bigbluebutton
               name: bigbluebutton
             - mountPath: /var/mediasoup
               name: vol-mediasoup
+
             - mountPath: /var/log/bigbluebutton
               name: periodic-tmpfs0
       restartPolicy: Always
       volumes:
-        - name: periodic-claim0
-          persistentVolumeClaim:
-            claimName: periodic-claim0
+        # - name: periodic-claim0
+        #   persistentVolumeClaim:
+        #     claimName: periodic-claim0
+
         - name: bigbluebutton
           persistentVolumeClaim:
             claimName: bigbluebutton
         - name: vol-mediasoup
           persistentVolumeClaim:
             claimName: vol-mediasoup
+
         - emptyDir:
             medium: Memory
           name: periodic-tmpfs0

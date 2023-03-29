@@ -17,4 +17,4 @@ docker-compose.override.yml
 postgres-data
 
 *.bat
-deprecated-files/
+./deprecated-files/
