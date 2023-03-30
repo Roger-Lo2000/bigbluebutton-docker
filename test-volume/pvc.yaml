@@ -4,9 +4,9 @@ metadata:
   name: bigbluebutton-claim
 spec:
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteMany
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 1Gi
+      storage: 10Gi
 status: {}
