@@ -5,7 +5,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: "filesystem"
+  storageClassName: "bbb-pv"
   resources:
     requests:
       storage: 10Gi
