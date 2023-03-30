@@ -24,3 +24,4 @@ spec:
         - name: bigbluebutton
           persistentVolumeClaim:
             claimName: bigbluebutton-claim
+            readOnly: false
