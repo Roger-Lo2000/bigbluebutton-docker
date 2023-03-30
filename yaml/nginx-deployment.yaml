@@ -39,18 +39,18 @@ spec:
             - mountPath: /html5-static
               name: html5-static
               readOnly: true
-            - mountPath: /www/default.pdf
-              name: nginx-claim2
+              # need to think how to pass into it
+            # - mountPath: /www/default.pdf
+            #   name: nginx-claim2
       restartPolicy: Always
       volumes:
         - name: bigbluebutton
           persistentVolumeClaim:
             claimName: bigbluebutton
+            
         - name: html5-static
           persistentVolumeClaim:
             claimName: html5-static
             readOnly: true
-        - name: nginx-claim2
-          persistentVolumeClaim:
-            claimName: nginx-claim2
+
 status: {}
