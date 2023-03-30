@@ -5,8 +5,10 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  volumeMode: Filesystem
   resources:
     requests:
       storage: 10Gi
+  selector:
+    matchLabels:
+      pv: pv
 status: {}
