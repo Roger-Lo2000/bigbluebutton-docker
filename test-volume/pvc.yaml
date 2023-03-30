@@ -5,6 +5,7 @@ metadata:
 spec:
   accessModes:
     - ReadOnlyMany
+  volumeMode: Filesystem
   resources:
     requests:
       storage: 1Gi
