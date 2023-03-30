@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: vol-mediasoup-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: "manual"
+  resources:
+    requests:
+      storage: 10Gi
+status: {}
