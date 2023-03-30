@@ -5,11 +5,8 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: "bbb-pv"
+  storageClassName: "manual"
   resources:
     requests:
       storage: 10Gi
-  selector:
-    matchLabels:
-      pv: pv
 status: {}

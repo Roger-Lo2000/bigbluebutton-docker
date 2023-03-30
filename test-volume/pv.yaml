@@ -2,9 +2,8 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: bbb-pv
-  labels:
-    pv: pv
 spec:
+  storageClassName: manual
   capacity:
     storage: 1Ti
   accessModes:
