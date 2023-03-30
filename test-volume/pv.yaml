@@ -8,5 +8,5 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    path: persistentVolume
+    path: /persistentVolume
     server: 10.21.145.2
