@@ -5,8 +5,8 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: "manual"
+  storageClassName: "mediasoup"
   resources:
     requests:
-      storage: 10Gi
+      storage: 100Gi
 status: {}

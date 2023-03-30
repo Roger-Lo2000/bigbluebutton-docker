@@ -109,6 +109,7 @@ spec:
               name: freeswitch-config1-volume
             - mountPath: /var/freeswitch/meetings
               name: vol-freeswitch
+              
       restartPolicy: Always
       volumes:
         - name: freeswitch-config2-volume
