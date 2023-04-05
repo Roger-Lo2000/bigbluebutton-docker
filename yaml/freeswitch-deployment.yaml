@@ -86,7 +86,7 @@ spec:
                 configMapKeyRef:
                   name: freeswitch
                   key: freeswitch.tls.enable
-          image: asia-east1-docker.pkg.dev/mplus-video-conference-dv/mplus/bbb-k8s-freeswitch:v2.5.0
+          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-freeswitch:v2.5.0
           ports:
           - name: fsesl
             containerPort: 8021
