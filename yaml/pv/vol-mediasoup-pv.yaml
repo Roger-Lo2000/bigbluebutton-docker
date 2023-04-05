@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: vol-mediasoup-pv
+spec:
+  storageClassName: vol-mediasoup
+  capacity:
+    storage: 100Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    path: /persistentVolume
+    server: 10.21.145.2
