@@ -4,9 +4,10 @@ metadata:
   name: bigbluebutton
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
+  storageClassName: "bigbluebotton"
   resources:
     requests:
-      storage: 10Gi
+      storage: 100Gi
 status: {}
 

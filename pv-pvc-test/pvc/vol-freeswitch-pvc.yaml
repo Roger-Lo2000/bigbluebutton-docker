@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: bigbluebutton
+  name: vol-freeswitch
 spec:
+  storageClassName: "vol-freeswitch"
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 10Gi
 status: {}
-

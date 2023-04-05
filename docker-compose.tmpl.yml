@@ -370,7 +370,7 @@ services:
     image: valian/docker-nginx-auto-ssl
     restart: unless-stopped
     volumes:
-      - ssl_data:/etc/resty-auto-ssl
+      - _dasslta:/etc/resty-auto-ssl
     {{ if .Env.EXTERNAL_IPv6 }}
       - ./mod/https/site.conf:/etc/nginx/conf.d/bbb-docker.conf
     {{else}}

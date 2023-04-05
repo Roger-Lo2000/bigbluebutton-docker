@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: bigbluebutton
+  name: html5-static
 spec:
+  storageClassName: "html5-static"
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
+      storage: 100Gi
 status: {}
-
