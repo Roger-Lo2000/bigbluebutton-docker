@@ -29,13 +29,17 @@ spec:
       containers:
         - env:
             - name: CLIENT_HOST
-              value: 192.168.49.2
+              value: 10.0.0.7
+              #value: 192.168.49.2
+              
             - name: ESL_IP
-              value: 192.168.49.2
+              value: 10.0.0.7
+              #value: 192.168.49.2
             - name: ESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: FREESWITCH_IP
-              value: 192.168.49.2
+              value: 10.0.0.7
+              #value: 192.168.49.2
             - name: FREESWITCH_SIP_IP
               value: 34.80.126.38
             - name: MS_RTP_LISTEN_IP
@@ -63,3 +67,6 @@ spec:
             medium: Memory
           name: webrtc-sfu-tmpfs0
 status: {}
+##
+##{"error":"Error: listen EADDRNOTAVAIL: address not available 192.168.49.2:3008\n    at Server.setupListenHandle [as _listen2] (net.js:1314:21)\n    at listenInCluster (net.js:1379:12)\n    at doListen (net.js:1516:7)\n    at processTicksAndRejections (internal/process/task_queues.js:83:21)","label":"sfu","level":"error","message":"CRITICAL: uncaught exception, shutdown",
+"timestamp":"2023-04-14T13:18:15.517Z"}
