@@ -41,6 +41,7 @@ spec:
               readOnly: true
             - mountPath: /etc/nginx/bbb/
               name: nginx-config-volume
+              
               # need to think how to pass into it
             # - mountPath: /www/default.pdf
             #   name: nginx-claim2
