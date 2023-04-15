@@ -39,6 +39,8 @@ spec:
             - mountPath: /html5-static
               name: html5-static
               readOnly: true
+            - mountPath: /etc/nginx/bbb/
+              name: nginx-volume
               # need to think how to pass into it
             # - mountPath: /www/default.pdf
             #   name: nginx-claim2
@@ -52,5 +54,7 @@ spec:
           persistentVolumeClaim:
             claimName: html5-static
             readOnly: true
-
+        - name: nginx-config-volume
+          configMap:
+            name: nginx-config
 status: {}
