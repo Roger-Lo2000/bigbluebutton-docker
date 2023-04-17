@@ -51,7 +51,7 @@ spec:
             - name: DISABLE_SOUND_MUTED
               value: "false"
             - name: DOMAIN
-              value: test.mmlab.live
+              value: test.mmlab.online
             - name: ESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: EXTERNAL_IPv4

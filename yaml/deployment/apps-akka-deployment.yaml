@@ -28,7 +28,7 @@ spec:
       containers:
         - env:
             - name: DOMAIN
-              value: test.mmlab.live
+              value: test.mmlab.online
             - name: SHARED_SECRET
               value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
           image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-apps-akka:v2.5.5
