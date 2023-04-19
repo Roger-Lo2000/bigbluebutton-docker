@@ -35,7 +35,7 @@ spec:
             - name: AUTO_SHARE_WEBCAM
               value: "false"
             - name: BIGBLUEBUTTON_ENDPOINT
-              value: https://test.mmlab.live/bigbluebutton/api/
+              value: https://test.mmlab.online/bigbluebutton/api/
             - name: BIGBLUEBUTTON_SECRET
               value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
             - name: BREAKOUTROOM_LIMIT
@@ -142,7 +142,7 @@ spec:
             - name: SIP_IP_ALLOWLIST
             - name: SMTP_AUTH
             - name: SMTP_DOMAIN
-              value: test.mmlab.live
+              value: test.mmlab.online
             - name: SMTP_PASSWORD
             - name: SMTP_PORT
             - name: SMTP_SENDER
@@ -158,7 +158,7 @@ spec:
             - name: TURN_SECRET
               value: 86b5SM4DJdbODf54AL6feE7bBIG7R5WD
             - name: TURN_SERVER
-              value: turns:test.mmlab.live:5349?transport=tcp
+              value: turns:test.mmlab.online:5349?transport=tcp
             - name: WELCOME_FOOTER
               value: '"This server is running <a href=''https://docs.bigbluebutton.org/'''' target=''_blank''><u>BigBlueButton</u></a>."'
             - name: WELCOME_MESSAGE
