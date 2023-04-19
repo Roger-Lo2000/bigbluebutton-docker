@@ -9,6 +9,8 @@ kubectl get pods --all-namespaces | grep ContainerStatusUnknown | awk '{print $2
 kubectl get pods --all-namespaces | grep Evicted | awk '{print $2 " --namespace=" $1}' | xargs kubectl delete pod
 kubectl get pods --all-namespaces | grep Error | awk '{print $2 " --namespace=" $1}' | xargs kubectl delete pod
 
+kubectl get endpoints ##入口
+
 kubectl create configmap mongodb-config --from-file=mongodb-config
 kubectl create configmap https-proxy-config --from-file=https-proxy-config
 kubectl create configmap freeswitch-config1 --from-file=freeswitch-config1
