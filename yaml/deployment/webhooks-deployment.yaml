@@ -23,7 +23,7 @@ spec:
       labels:
         io.kompose.network/bbb-net: "true"
         io.kompose.service: webhooks
-        label: webhooks
+        app: webhooks
     spec:
       containers:
         - env:
@@ -34,7 +34,7 @@ spec:
           image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-webhooks:v2.6.0
           name: webhooks
           ports:
-          - containerPort: 3015
+          - containerPort: 3005
           resources: {}
       restartPolicy: Always
 status: {}
