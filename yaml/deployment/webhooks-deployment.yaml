@@ -34,7 +34,7 @@ spec:
           image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-webhooks:v2.6.0
           name: webhooks
           ports:
-          - containerPort: 3005
+          - containerPort: 3015
           resources: {}
       restartPolicy: Always
 status: {}
