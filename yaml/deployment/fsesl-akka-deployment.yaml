@@ -23,6 +23,7 @@ spec:
       labels:
         io.kompose.network/bbb-net: "true"
         io.kompose.service: fsesl-akka
+        app: fsesl-akka
     spec:
       containers:
         - env:
