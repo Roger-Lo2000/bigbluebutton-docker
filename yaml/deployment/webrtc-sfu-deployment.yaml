@@ -22,6 +22,7 @@ spec:
         kompose.version: 1.26.1 (a9d05d509)
       creationTimestamp: null
       labels:
+        io.kompose.network/bbb-net: "true"
         io.kompose.service: webrtc-sfu
         app: webrtc-sfu
     spec:
