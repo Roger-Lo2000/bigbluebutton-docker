@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: kalilinux/kali-last-release:latest
+        image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/ubuntu:latest
         command:
           - "sleep"
           - "604800"
