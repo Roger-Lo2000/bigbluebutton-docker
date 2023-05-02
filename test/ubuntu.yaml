@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: ubuntu
+        image: kali-dev
         command:
           - "sleep"
           - "604800"
