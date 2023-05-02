@@ -35,7 +35,7 @@ spec:
             - name: AUTO_SHARE_WEBCAM
               value: "false"
             - name: BIGBLUEBUTTON_ENDPOINT ## here is the problem for the invalid endpoint and secret
-              value: http://test.mmlab.online/bigbluebutton/api/
+              value: http://35.201.187.138:5000/bigbluebutton/api/
             - name: BIGBLUEBUTTON_SECRET ## here is the problem for the invalid endpoint and secret
               value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
             - name: BREAKOUTROOM_LIMIT
