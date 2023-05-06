@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: demo-service2
 spec:
-  type: NodePort
   ports:
   - port: 6100
     protocol: TCP
@@ -11,3 +10,4 @@ spec:
   selector:
     app: deployment2
   clusterIP: 5.1.0.50
+
