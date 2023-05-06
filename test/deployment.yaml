@@ -16,4 +16,4 @@ spec:
       - name: demo-pod
         image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/docker-demo:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 3100
