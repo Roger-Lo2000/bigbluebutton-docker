@@ -22,3 +22,5 @@ spec:
             cpu: "100m"
         ports:
         - containerPort: 40404
+      nodeSelector: 
+        hardware: high-memory
