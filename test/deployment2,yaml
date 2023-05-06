@@ -13,15 +13,6 @@ spec:
         app: deployment
     spec:
       containers:
-      - name: demo-pod-1
-        image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/docker-demo:latest
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "100m"
-        ports:
-        - containerPort: 3000
-
       - name: demo-pod-2
         image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/docker-demo:3050
         resources:
