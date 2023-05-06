@@ -12,7 +12,7 @@ spec:
         app: myapp
     spec:
       containers:
-      - name: myapp
+      - name: myapp1
         image:  asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/ubuntu:latest
         command: ["/bin/sleep"]
         args: ["36000"]
@@ -21,4 +21,14 @@ spec:
             memory: "128Mi"
             cpu: "100m"
         ports:
-        - containerPort: 40404
+        - containerPort: 3333
+      - name: myapp2
+        image:  asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/ubuntu:latest
+        command: ["/bin/sleep"]
+        args: ["36000"]
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3334
