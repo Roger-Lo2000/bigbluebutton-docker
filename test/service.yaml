@@ -11,3 +11,4 @@ spec:
     targetPort: 3000
   selector:
     app: deployment
+  clusterIP: 5.1.0.40
