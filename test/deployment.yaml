@@ -13,7 +13,12 @@ spec:
         app: deployment
     spec:
       containers:
-      - name: demo-pod
+      - name: demo-pod-1
         image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/docker-demo:latest
         ports:
         - containerPort: 3000
+
+      - name: demo-pod-2
+        image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/docker-demo:latest
+        ports:
+        - containerPort: 3001
