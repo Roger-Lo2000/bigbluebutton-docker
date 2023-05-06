@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: ubuntu1
-        image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/ubuntu:v2
+        image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/ubuntu:latest
         command:
           - "sleep"
           - "604800"
@@ -24,7 +24,7 @@ spec:
         ports:
         - containerPort: 48787
       - name: ubuntu2
-        image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/ubuntu:v2
+        image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/ubuntu:latest
         command:
           - "sleep"
           - "604800"
