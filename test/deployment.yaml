@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: demo-pod
-        image: zxcvbnius/docker-demo:latest
+        image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/docker-demo:latest
         ports:
         - containerPort: 3000
