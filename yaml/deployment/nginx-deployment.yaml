@@ -31,7 +31,7 @@ spec:
         - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-nginx:v2.5.5-3
           name: nginx
           ports:
-          - containerPort: 7443
+          - containerPort: 48087 #7443
           resources: {}
           volumeMounts:
             - mountPath: /var/bigbluebutton
