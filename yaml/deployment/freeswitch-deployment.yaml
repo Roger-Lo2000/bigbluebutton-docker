@@ -94,6 +94,8 @@ spec:
             containerPort: 7443
           - name: webrtc-sfu
             containerPort: 5066
+          - name: SIPS
+            containerPort: 5081
           name: bbb-freeswitch
           resources: {}
           securityContext:
