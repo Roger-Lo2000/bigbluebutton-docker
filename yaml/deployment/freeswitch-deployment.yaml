@@ -45,7 +45,7 @@ spec:
       containers:
         - env:
             - name: ANNOUNCED_IPv4
-              value: 34.80.126.38
+              value: 35.229.184.217
             - name: DISABLE_SOUND_ALONE
               value: "false"
             - name: DISABLE_SOUND_MUTED
@@ -55,7 +55,7 @@ spec:
             - name: ESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: EXTERNAL_IPv4
-              value: 34.80.126.38
+              value: 35.229.184.217
             - name: EXTERNAL_IPv6
               value: ::1
             - name: SIP_IP_ALLOWLIST
@@ -90,6 +90,10 @@ spec:
           ports:
           - name: fsesl
             containerPort: 8021
+          - name: nginx
+            containerPort: 7443
+          - name: webrtc-sfu
+            containerPort: 5066
           name: bbb-freeswitch
           resources: {}
           securityContext:
@@ -103,10 +107,10 @@ spec:
                 - SYS_RESOURCE
           volumeMounts:
             - mountPath: /etc/freeswitch/sip_profiles/external
-              name: freeswitch-config2-volume
-            
+              name: freeswitch-config2-volume         
             - mountPath: /etc/freeswitch/dialplan/public_docker
               name: freeswitch-config1-volume
+
             - mountPath: /var/freeswitch/meetings
               name: vol-freeswitch
               
