@@ -47,32 +47,12 @@ spec:
           securityContext:
             allowPrivilegeEscalation: false
             runAsUser: 0
-          # volumeMounts:
-          #   - mountPath: /etc/resty-auto-ssl
-          #     name: ssl-data
-          #   - mountPath: /usr/local/bin/docker-entrypoint.sh
-          #     name: coturn-claim1
-          #   - mountPath: /etc/coturn/turnserver.conf
-          #     name: coturn-claim2
-          #   - mountPath: /tmp/cert.pem
-          #     name: cert-claim1
-          #   - mountPath: /tmp/key.pem
-          #     name: cert-claim2
+          volumeMounts:
+            - mountPath: /tmp
+                name: coturn-config-volume
       restartPolicy: Always
-      # volumes:
-      #   - name: ssl-data
-      #     persistentVolumeClaim:
-      #       claimName: ssl-data
-      #   - name: coturn-claim1
-      #     persistentVolumeClaim:
-      #       claimName: coturn-claim1
-      #   - name: coturn-claim2
-      #     persistentVolumeClaim:
-      #       claimName: coturn-claim2
-      #   - name: cert-claim1
-      #     persistentVolumeClaim:
-      #       claimName: cert-claim1
-      #   - name: cert-claim2
-      #     persistentVolumeClaim:
-      #       claimName: cert-claim2
+      volumes:
+        - name: coturn-config-volume
+          configMap:
+            name: coturn-config
 status: {}
