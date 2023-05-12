@@ -50,7 +50,7 @@ spec:
           volumeMounts:
             - mountPath: /tmp
               name: coturn-config-volume
-            - mountPath: /etc
+            - mountPath: /etc/turnserver.conf
               name: coturn-server-conf-volume
       restartPolicy: Always
       volumes:
