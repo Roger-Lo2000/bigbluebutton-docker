@@ -42,6 +42,7 @@ spec:
           image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/coturn:4.5-alpine
           ports:
           - containerPort: 5349
+          - containerPort: 3478
           name: coturn
           resources: {}
           securityContext:
