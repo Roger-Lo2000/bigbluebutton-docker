@@ -49,7 +49,7 @@ spec:
             runAsUser: 0
           volumeMounts:
             - mountPath: /tmp
-                name: coturn-config-volume
+              name: coturn-config-volume
       restartPolicy: Always
       volumes:
         - name: coturn-config-volume
