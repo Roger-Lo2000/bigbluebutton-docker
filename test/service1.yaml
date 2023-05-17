@@ -7,7 +7,7 @@ spec:
   ports:
   - port: 6000
     protocol: TCP
-    targetPort: 3000
+    targetPort: 80
   selector:
     app: deployment1
   clusterIP: 5.1.0.30
