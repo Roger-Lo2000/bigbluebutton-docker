@@ -32,6 +32,7 @@ spec:
           name: nginx
           ports:
           - containerPort: 48087 #7443
+          - containerPort: 3008
           resources: {}
           volumeMounts:
             - mountPath: /var/bigbluebutton
