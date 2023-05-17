@@ -2,6 +2,7 @@
 kubectl delete configMap https-proxy-config
 kubectl delete configMap mongodb-config
 kubectl delete --all deployment --namespace=default
+kubectl delete svc --all
 kubectl delete pvc --all
 kubectl delete pv --all
 
@@ -21,4 +22,3 @@ kubectl create configmap coturn-config --from-file=coturn-config
 kubectl create configmap coturn-server-conf --from-file=coturn
 
 kubectl apply -f ./yaml --recursive 
-\cite{ref1}
