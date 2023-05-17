@@ -47,6 +47,7 @@ spec:
           image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-webrtc-sfu:v2.8.5
           ports:
           - containerPort: 3008
+          - containerPort: 8021
           name: webrtc-sfu
           resources: {}
           volumeMounts:
