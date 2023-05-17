@@ -7,7 +7,7 @@ spec:
   ports:
   - port: 48787
     protocol: TCP
-    targetPort: 48787
+    targetPort: 80
   selector:
     app: deployment1
   clusterIP: 5.1.0.30
