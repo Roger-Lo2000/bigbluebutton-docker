@@ -31,4 +31,4 @@ spec:
   - port: 80
     protocol: TCP
     targetPort: 80
-  clusterIP: 5.1.0.80
+clusterIP: 5.1.0.80
