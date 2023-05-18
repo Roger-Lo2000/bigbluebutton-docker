@@ -17,6 +17,6 @@ spec:
       targetPort: 80
   selector:
     io.kompose.service: greenlight
-  loadBalancerIP: 34.81.10.40
+  loadBalancerIP: 34.81.117.231
 status:
   loadBalancer: {}
