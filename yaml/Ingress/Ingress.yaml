@@ -14,4 +14,4 @@ spec:
             service:
               name: greenlight
               port: 
-                number: 5000
+                number: 80
