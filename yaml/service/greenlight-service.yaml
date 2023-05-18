@@ -30,5 +30,5 @@ spec:
   ports:
   - port: 5000
     protocol: TCP
-    targetPort: 5000
+    targetPort: 80
   clusterIP: 5.1.0.80
