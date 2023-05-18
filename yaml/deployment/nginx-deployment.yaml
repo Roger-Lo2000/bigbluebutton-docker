@@ -31,8 +31,6 @@ spec:
         - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-nginx:v2.5.5-3
           name: nginx
           ports:
-          - containerPort: 48087
-          - containerPort: 3008
           - containerPort: 80
           resources: {}
           volumeMounts:
