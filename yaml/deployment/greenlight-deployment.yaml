@@ -31,11 +31,11 @@ spec:
             - name: ALLOW_GREENLIGHT_ACCOUNTS
               value: "true"
             - name: ANNOUNCED_IPv4
-              value: 35.229.184.217
+              value: 34.81.117.231
             - name: AUTO_SHARE_WEBCAM
               value: "false"
             - name: BIGBLUEBUTTON_ENDPOINT ## here is the problem for the invalid endpoint and secret
-              value: http://35.229.184.217:5000/bigbluebutton/api/
+              value: http://34.81.117.231:80/bigbluebutton/api/
             - name: BIGBLUEBUTTON_SECRET ## here is the problem for the invalid endpoint and secret
               value: BIOt7rETUk9ehH1pJuf4zMsSateu8qNsxP3EgmDF
             - name: BREAKOUTROOM_LIMIT
@@ -88,7 +88,7 @@ spec:
             - name: ETHERPAD_API_KEY
               value: 1LeU6Do5DkpC8NWt8q4iyBCePO81PRIB6Rv1UvcA
             - name: EXTERNAL_IPv4
-              value: 34.80.142.158
+              value: 34.81.117.231
             - name: EXTERNAL_IPv6
             - name: FSESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
