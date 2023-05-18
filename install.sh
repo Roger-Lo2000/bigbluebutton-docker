@@ -22,3 +22,6 @@ kubectl create configmap coturn-config --from-file=coturn-config
 kubectl create configmap coturn-server-conf --from-file=coturn
 
 kubectl apply -f ./yaml --recursive 
+
+
+docker stop $(docker ps -aq)
