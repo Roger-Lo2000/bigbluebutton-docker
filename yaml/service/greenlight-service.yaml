@@ -29,4 +29,6 @@ spec:
     app: greenlight
   ports:
   - port: 5000
-    targetPort: 5.1.0.80
+    protocol: TCP
+    targetPort: 5000
+  clusterIP: 5.1.0.80
