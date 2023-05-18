@@ -5,7 +5,7 @@ metadata:
   labels:
     name: myingress
 spec:
-  backend:
+  defaultBackend:
     service:
       name: greenlight
       port: 
