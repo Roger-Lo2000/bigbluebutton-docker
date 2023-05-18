@@ -33,6 +33,7 @@ spec:
           ports:
           - containerPort: 48087
           - containerPort: 3008
+          - containerPort: 80
           resources: {}
           volumeMounts:
             - mountPath: /var/bigbluebutton
