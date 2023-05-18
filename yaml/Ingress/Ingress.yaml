@@ -12,6 +12,6 @@ spec:
           path: "/b"
           backend:
             service:
-              name: nginx-service
+              name: greenlight
               port: 
-                number: 80
+                number: 5000
