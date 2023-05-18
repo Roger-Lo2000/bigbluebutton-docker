@@ -5,13 +5,8 @@ metadata:
   labels:
     name: myingress
 spec:
-  rules:
-    - http:
-        paths:
-        - pathType: Prefix
-          path: "/b"
-          backend:
-            service:
-              name: greenlight
-              port: 
-                number: 80
+  backend:
+    service:
+      name: greenlight
+      port: 
+        number: 80
