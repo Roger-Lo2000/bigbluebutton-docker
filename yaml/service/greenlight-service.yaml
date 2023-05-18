@@ -1,22 +1,32 @@
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   annotations:
+#     kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+#     kompose.version: 1.26.1 (a9d05d509)
+#   creationTimestamp: null
+#   labels:
+#     io.kompose.service: greenlight
+#     app: greenlight
+#   name: greenlight
+# spec:
+#   type: LoadBalancer
+#   ports:
+#     - name: "80"
+#       port: 80
+#       targetPort: 80
+#   selector:
+#     io.kompose.service: greenlight
+#   loadBalancerIP: 34.81.117.231
+# status:
+#   loadBalancer: {}
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
-    kompose.version: 1.26.1 (a9d05d509)
-  creationTimestamp: null
-  labels:
-    io.kompose.service: greenlight
-    app: greenlight
   name: greenlight
 spec:
-  type: LoadBalancer
-  ports:
-    - name: "80"
-      port: 80
-      targetPort: 80
   selector:
-    io.kompose.service: greenlight
-  loadBalancerIP: 34.81.117.231
-status:
-  loadBalancer: {}
+    app: greenlight
+  ports:
+  - port: 5000
+    targetPort: 5.1.0.80
