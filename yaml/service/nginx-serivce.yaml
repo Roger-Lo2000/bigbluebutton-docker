@@ -14,7 +14,7 @@ spec:
   ports:
     - name: "80"
       port: 48087
-      targetPort: 80
+      targetPort: 48087
   selector:
     io.kompose.service: nginx
   loadBalancerIP: 34.81.117.231
