@@ -25,3 +25,4 @@ kubectl apply -f ./yaml --recursive
 
 
 docker stop $(docker ps -aq)
+docker remove $(docker ps -aq)
