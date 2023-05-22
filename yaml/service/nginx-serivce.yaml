@@ -5,9 +5,10 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  - port: 80
+  - port: 48087
     protocol: TCP
-    targetPort: 80
+    targetPort: 48087
   selector:
     app: nginx
   clusterIP: 5.1.0.30
+
