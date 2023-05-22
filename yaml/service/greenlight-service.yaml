@@ -30,7 +30,7 @@ spec:
   selector:
     app: greenlight
   ports:
-  - port: 80
+  - port: 5000
     protocol: TCP
     targetPort: 80
   clusterIP: 5.1.0.80
