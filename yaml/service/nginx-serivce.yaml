@@ -13,7 +13,7 @@ spec:
   type: LoadBalancer
   ports:
     - name: "80"
-      port: 48087
+      port: 80
       targetPort: 48087
   selector:
     io.kompose.service: nginx
