@@ -106,7 +106,7 @@ spec:
             - name: LDAP_ROLE_FIELD
             - name: LDAP_SERVER
             - name: LDAP_UID
-              value: "2"
+              value: "422"
             - name: LISTEN_ONLY_MODE
               value: "true"
             - name: MAINTENANCE_MODE
