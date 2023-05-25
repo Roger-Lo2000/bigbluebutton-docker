@@ -45,7 +45,7 @@ spec:
       containers:
         - env:
             - name: ANNOUNCED_IPv4
-              value: 35.229.184.217
+              value: 34.81.117.231
             - name: DISABLE_SOUND_ALONE
               value: "false"
             - name: DISABLE_SOUND_MUTED
@@ -55,7 +55,7 @@ spec:
             - name: ESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: EXTERNAL_IPv4
-              value: 35.229.184.217
+              value: 34.81.117.231
             - name: EXTERNAL_IPv6
               value: ::1
             - name: SIP_IP_ALLOWLIST
