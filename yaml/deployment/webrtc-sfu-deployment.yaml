@@ -29,13 +29,13 @@ spec:
       containers:
         - env:
             - name: CLIENT_HOST
-              value: 34.81.117.231
+              value: 5.1.0.50
             - name: ESL_IP
-              value: 34.81.117.231
+              value: 5.1.0.50
             - name: ESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: FREESWITCH_IP
-              value: 34.81.117.231 ## external IP
+              value: 5.1.0.50 ## external IP
             - name: FREESWITCH_SIP_IP
               value: 34.81.117.231
             - name: MS_RTP_LISTEN_IP
