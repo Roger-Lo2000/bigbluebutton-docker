@@ -29,19 +29,19 @@ spec:
       containers:
         - env:
             - name: CLIENT_HOST
-              value: 127.0.0.1
+              value: 34.81.117.231
             - name: ESL_IP
-              value: 127.0.0.1
+              value: 34.81.117.231
             - name: ESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: FREESWITCH_IP
-              value: 127.0.0.1 ## 
+              value: 34.81.117.231 ## external IP
             - name: FREESWITCH_SIP_IP
-              value: 35.201.187.138
+              value: 34.81.117.231
             - name: MS_RTP_LISTEN_IP
-              value: '{"ip":"0.0.0.0", "announcedIp":"35.201.187.138"}'
+              value: '{"ip":"0.0.0.0", "announcedIp":"34.81.117.231"}'
             - name: MS_WEBRTC_LISTEN_IPS
-              value: '[{"ip":"35.201.187.138", "announcedIp":"35.201.187.138"}]'
+              value: '[{"ip":"34.81.117.231", "announcedIp":"34.81.117.231"}]'
             - name: REDIS_HOST
               value: 5.1.0.5
           image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-webrtc-sfu:v2.8.5
