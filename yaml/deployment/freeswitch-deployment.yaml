@@ -112,8 +112,9 @@ spec:
               name: freeswitch-config2-volume         
             - mountPath: /etc/freeswitch/dialplan/public_docker
               name: freeswitch-config1-volume
-            - mountPath: /etc/freeswitch/autoload_configs/
+            - mountPath: /etc/freeswitch/autoload_configs/event_socket.conf.xml
               name: freeswitch-config3-volume
+              subPath: "event_socket.conf.xml"
             - mountPath: /var/freeswitch/meetings
               name: vol-freeswitch
               
