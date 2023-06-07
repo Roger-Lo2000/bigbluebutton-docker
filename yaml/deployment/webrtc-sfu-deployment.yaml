@@ -54,6 +54,10 @@ spec:
               name: vol-mediasoup
             - mountPath: /var/log/bbb-webrtc-sfu
               name: webrtc-sfu-tmpfs0
+            
+            - mountPath: /app/config/production.yml
+              name: webrtc-sfu-config-volume
+              subPath: "production.yml"
       restartPolicy: Always
       volumes:
         - name: vol-mediasoup
@@ -62,4 +66,7 @@ spec:
         - emptyDir:
             medium: Memory
           name: webrtc-sfu-tmpfs0
+        - name: webrtc-sfu-config-volume
+          configMap:
+            name: webrtc-sfu-config
 status: {}
