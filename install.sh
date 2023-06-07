@@ -21,7 +21,7 @@ kubectl create configmap nginx-config --from-file=nginx-config
 kubectl create configmap nginx-default-pdf --from-file=nginx-default-pdf/default.pdf
 kubectl create configmap coturn-config --from-file=coturn-config
 kubectl create configmap coturn-server-conf --from-file=coturn
-
+kubectl create configmap freeswitch-config3 --from-file=freeswitch-config3
 kubectl apply -f ./yaml --recursive 
 
 
