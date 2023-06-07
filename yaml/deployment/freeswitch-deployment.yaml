@@ -112,7 +112,8 @@ spec:
               name: freeswitch-config2-volume         
             - mountPath: /etc/freeswitch/dialplan/public_docker
               name: freeswitch-config1-volume
-
+            - mountPath: /etc/freeswitch/autoload_configs/
+              name: freeswitch-config3-volume
             - mountPath: /var/freeswitch/meetings
               name: vol-freeswitch
               
@@ -124,7 +125,10 @@ spec:
         - name: freeswitch-config1-volume
           configMap:
             name: freeswitch-config1
-
+        
+        - name: freeswitch-config3-volume
+          configMap:
+            name: freeswitch-config3
         - name: vol-freeswitch
           persistentVolumeClaim:
             claimName: vol-freeswitch
