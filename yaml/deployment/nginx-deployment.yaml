@@ -45,8 +45,9 @@ spec:
               name: nginx-config-volume
               
               # need to think how to pass into it
-            # - mountPath: /www/default.pdf
-            #   name: nginx-claim2
+            - mountPath: /www/default.pdf
+              name: nginx-default-pdf-volume
+              subPath: "default.pdf"
       restartPolicy: Always
       volumes:
         - name: bigbluebutton
@@ -60,4 +61,7 @@ spec:
         - name: nginx-config-volume
           configMap:
             name: nginx-config
+        - name: nginx-default-pdf-volume
+          configMap:
+            name: nginx-default-pdf
 status: {}
