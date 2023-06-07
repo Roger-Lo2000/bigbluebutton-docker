@@ -6,9 +6,9 @@ spec:
   type: ClusterIP
   ports:
   - name: fsesl
-    port: 8021
+    port: 7443
     protocol: TCP
-    targetPort: 8021
+    targetPort: 7443
   selector:
     app: freeswitch
   clusterIP: 5.1.0.50
