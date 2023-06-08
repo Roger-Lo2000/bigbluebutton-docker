@@ -30,7 +30,7 @@ spec:
         - env:
             - name: DEV_MODE
             - name: DOMAIN
-              value: test.mmlab.online
+              value: 34.81.117.231
             - name: ENABLE_LEARNING_DASHBOARD
               value: "true"
             - name: ENABLE_RECORDING
