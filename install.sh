@@ -23,6 +23,7 @@ kubectl create configmap coturn-config --from-file=coturn-config
 kubectl create configmap coturn-server-conf --from-file=coturn
 kubectl create configmap freeswitch-config3 --from-file=freeswitch-config3
 kubectl create configmap freeswitch-config4 --from-file=freeswitch-config4
+kubectl create configmap webrtc-sfu-config --from-file=webrtc-sfu-config
 kubectl apply -f ./yaml --recursive 
 
 
@@ -30,14 +31,6 @@ docker stop $(docker ps -aq)
 docker remove $(docker ps -aq)
 
 
-## postgressql
-
- id | room_id | provider | uid | name | username | email | social_uid | image | 
- password_digest | accepted_terms | created_at | updated_at | email_verified | language 
- | reset_digest | 
-reset_sent_at | activation_digest | activated_at | 
-deleted | role_id | last_login | failed_attempts | 
-last_failed_attempt | last_pwd_update
 
 
 INSERT INTO users (id,room_id,provider,uid,name,username,email,social_uid,image,password_digest,accepted_terms,created_at,updated_at,email_verified,language,reset_digest,reset_sent_at,activation_digest,activated_at,deleted,role_id,last_login,failed_attempts,last_failed_attempt,last_pwd_update) VALUES (1,2,3,4,5,6,7,8,9,10,FALSE,'2023-05-25 10:30:00','2023-05-25 10:30:00',FALSE,15,16,'2023-05-25 10:30:00',18,'2023-05-25 10:30:00',FALSE,21,'2023-05-25 10:30:00',23,'2023-05-25 10:30:00','2023-05-25 10:30:00');
