@@ -35,6 +35,6 @@ location /html5client/wasm {
 
 location /html5client/ {
   alias /html5-static;
-  try_files $uri @html5client;
+  try_files http://34.81.117.231/@html5client;
 }
 

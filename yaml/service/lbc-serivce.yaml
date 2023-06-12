@@ -18,5 +18,6 @@ spec:
   selector:
     io.kompose.service: nginx
   loadBalancerIP: 34.81.117.231
+  
 status:
   loadBalancer: {}
