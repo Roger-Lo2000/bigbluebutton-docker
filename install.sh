@@ -18,12 +18,17 @@ kubectl create configmap https-proxy-config --from-file=https-proxy-config
 kubectl create configmap freeswitch-config1 --from-file=freeswitch-config1
 kubectl create configmap freeswitch-config2 --from-file=freeswitch-config2
 kubectl create configmap nginx-config --from-file=nginx-config
+kubectl create configmap nginx-default-config --from-file=nginx-default-config
 kubectl create configmap nginx-default-pdf --from-file=nginx-default-pdf/default.pdf
 kubectl create configmap coturn-config --from-file=coturn-config
 kubectl create configmap coturn-server-conf --from-file=coturn
 kubectl create configmap freeswitch-config3 --from-file=freeswitch-config3
 kubectl create configmap freeswitch-config4 --from-file=freeswitch-config4
 kubectl create configmap webrtc-sfu-config --from-file=webrtc-sfu-config
+kubectl create configmap ssl-config --from-file=ssl-config
+
+
+
 kubectl apply -f ./yaml --recursive 
 
 

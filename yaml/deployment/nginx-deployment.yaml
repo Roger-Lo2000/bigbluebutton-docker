@@ -43,7 +43,12 @@ spec:
               readOnly: true
             - mountPath: /etc/nginx/bbb/
               name: nginx-config-volume
-              
+
+            - mountPath: /etc/nginx/conf.d/
+              name: nginx-default-config-volume
+
+            - mountPath: /tmp/
+              name: ssl-config-volume
               # need to think how to pass into it
             - mountPath: /www/default.pdf
               name: nginx-default-pdf-volume
@@ -58,9 +63,19 @@ spec:
           persistentVolumeClaim:
             claimName: html5-static
             readOnly: true
+
         - name: nginx-config-volume
           configMap:
             name: nginx-config
+
+        - name: nginx-default-config-volume
+          configMap:
+            name: nginx-default-config
+
+        - name: ssl-config-volume
+          configMap:
+            name: ssl-config
+
         - name: nginx-default-pdf-volume
           configMap:
             name: nginx-default-pdf
