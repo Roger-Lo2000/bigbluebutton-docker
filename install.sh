@@ -27,10 +27,13 @@ kubectl create configmap freeswitch-config4 --from-file=freeswitch-config4
 kubectl create configmap webrtc-sfu-config --from-file=webrtc-sfu-config
 kubectl create configmap ssl-config --from-file=ssl-config
 
-
+## 刪除nginx -> 刪除nginx-config -> 部署nginx-config -> 部署nginx
+kubectl delete deployment nginx
+kubectl delete configMap nginx-config
+kubectl create configmap nginx-config --from-file=nginx-config
+kubectl apply -f yaml/deployment/nginx-deployment.yaml
 
 kubectl apply -f ./yaml --recursive 
-
 
 docker stop $(docker ps -aq)
 docker remove $(docker ps -aq)
