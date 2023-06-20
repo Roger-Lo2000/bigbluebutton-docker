@@ -30,7 +30,10 @@ kubectl create configmap ssl-config --from-file=ssl-config
 ## 刪除nginx -> 刪除nginx-config -> 部署nginx-config -> 部署nginx
 kubectl delete deployment nginx
 kubectl delete configMap nginx-config
+kubectl delete configMap nginx-default-config 
+
 kubectl create configmap nginx-config --from-file=nginx-config
+kubectl create configmap nginx-default-config --from-file=nginx-default-config
 kubectl apply -f yaml/deployment/nginx-deployment.yaml
 
 kubectl apply -f ./yaml --recursive 
