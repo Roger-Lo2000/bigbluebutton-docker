@@ -45,7 +45,7 @@ spec:
             - name: DISABLE_VIDEO_PREVIEW
               value: "false"
             - name: DOMAIN
-              value: 34.81.117.231
+              value: test.mmlab.online
             - name: INSTANCE_ID
               value: "1"
             - name: LISTEN_ONLY_MODE
