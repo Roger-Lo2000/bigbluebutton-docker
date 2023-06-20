@@ -32,8 +32,8 @@ spec:
               value: test.mmlab.online
           #image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/docker-nginx-auto-ssl:latest
           image: valian/docker-nginx-auto-ssl
-          #ports:
-          #- containerPort: 80
+          ports:
+          - containerPort: 443
           name: https-proxy
           securityContext:
             allowPrivilegeEscalation: false
