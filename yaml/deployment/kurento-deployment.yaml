@@ -23,6 +23,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: kurento
+        app: kurento
     spec:
       hostNetwork: true
       containers:
