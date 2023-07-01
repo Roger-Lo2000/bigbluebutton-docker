@@ -130,7 +130,7 @@ freeswitch:
   port: 5066
   esl_ip: 5.1.0.50
   esl_port: 8021
-  #esl_password: FOOBAR
+  esl_password: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
   handleExternalConnections: false
   ipClassMappings:
     local:
