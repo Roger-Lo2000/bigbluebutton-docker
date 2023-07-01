@@ -22,7 +22,7 @@ spec:
 
   selector:
     io.kompose.service: nginx
-    app: freeswitch
+    # app: freeswitch
   loadBalancerIP: 34.81.117.231
   
 status:
