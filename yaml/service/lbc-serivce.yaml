@@ -16,7 +16,7 @@ spec:
       port: 443
       targetPort: 443
 
-    - name: esl_ip
+    - name: esl-ip
       port: 8021
       targetPort: 8021
 
