@@ -24,6 +24,7 @@ kubectl create configmap coturn-config --from-file=coturn-config
 kubectl create configmap coturn-server-conf --from-file=coturn
 kubectl create configmap freeswitch-config3 --from-file=freeswitch-config3
 kubectl create configmap freeswitch-config4 --from-file=freeswitch-config4
+kubectl create configmap freeswitch-config5 --from-file=freeswitch-config5
 kubectl create configmap webrtc-sfu-config --from-file=webrtc-sfu-config
 kubectl create configmap ssl-config --from-file=ssl-config
 

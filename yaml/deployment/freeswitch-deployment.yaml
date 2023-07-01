@@ -118,6 +118,10 @@ spec:
               name: freeswitch-config3-volume
               subPath: "event_socket.conf.xml"
 
+            - mountPath: /etc/freeswitch/autoload_configs/acl.conf.xml
+              name: freeswitch-config5-volume
+              subPath: "acl.conf.xml"
+
             - mountPath: /etc/freeswitch/sip_profiles/
               name: freeswitch-config4-volume
 
@@ -139,7 +143,11 @@ spec:
         - name: freeswitch-config4-volume
           configMap:
             name: freeswitch-config4
+        - name: freeswitch-config5-volume
+          configMap:
+            name: freeswitch-config5
         - name: vol-freeswitch
           persistentVolumeClaim:
             claimName: vol-freeswitch
+
 status: {}
