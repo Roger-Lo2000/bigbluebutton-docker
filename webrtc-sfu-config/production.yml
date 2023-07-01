@@ -1,6 +1,6 @@
 kurento:
   - ip: 0.0.0.0
-    url: ws://5.1.0.70:8888/kurento
+    url: ws://127.0.0.1:8888/kurento
     # mediaType: (main|audio|content)
     ipClassMappings:
       local:
@@ -123,12 +123,11 @@ mcs-port: 3010
 mcs-host: 127.0.0.1
 mcs-address: localhost
 mcs-ws-timeout: 30000
-
 freeswitch:
-  ip: 5.1.0.50
-  sip_ip: 5.1.0.50
+  ip: 127.0.0.1
+  sip_ip: 127.0.0.1
   port: 5066
-  esl_ip: 5.1.0.50
+  esl_ip: 127.0.0.1
   esl_port: 8021
   #esl_password: FOOBAR
   handleExternalConnections: false
