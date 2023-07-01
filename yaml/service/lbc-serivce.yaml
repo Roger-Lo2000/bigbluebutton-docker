@@ -16,10 +16,10 @@ spec:
       port: 443
       targetPort: 443
 
-    - name: ESL_IP
+    - name: esl_ip
       port: 8021
       targetPort: 8021
-      
+
   selector:
     io.kompose.service: nginx
     app: freeswitch
