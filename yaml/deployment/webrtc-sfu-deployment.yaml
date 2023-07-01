@@ -31,7 +31,7 @@ spec:
             - name: CLIENT_HOST
               value: 34.81.117.231
             - name: ESL_IP
-              value: 34.81.117.231
+              value: 5.1.0.70
             - name: ESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: FREESWITCH_IP
