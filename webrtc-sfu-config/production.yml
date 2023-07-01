@@ -129,7 +129,7 @@ freeswitch:
   sip_ip: 5.1.0.50
   port: 5066
   esl_ip: 5.1.0.50
-  esl_port: 7777
+  esl_port: 8021
   #esl_password: FOOBAR
   handleExternalConnections: false
   ipClassMappings:
