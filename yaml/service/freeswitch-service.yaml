@@ -5,10 +5,22 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  - name: fsesl
+  - name: nginx
     port: 7443
     protocol: TCP
     targetPort: 7443
+
+  - name: fsesl
+    port: 8021
+    protocol: TCP
+    targetPort: 8021
+
+  - name: webrtc-sfu
+    port: 5066
+    protocol: TCP
+    targetPort: 5066
+
+
   selector:
     app: freeswitch
   clusterIP: 5.1.0.50
