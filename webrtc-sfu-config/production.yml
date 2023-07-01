@@ -1,6 +1,6 @@
 kurento:
   - ip: 0.0.0.0
-    url: ws://127.0.0.1:8888/kurento
+    url: ws://5.1.0.70:8888/kurento
     # mediaType: (main|audio|content)
     ipClassMappings:
       local:
@@ -123,6 +123,7 @@ mcs-port: 3010
 mcs-host: 127.0.0.1
 mcs-address: localhost
 mcs-ws-timeout: 30000
+
 freeswitch:
   ip: 127.0.0.1
   sip_ip: 127.0.0.1
