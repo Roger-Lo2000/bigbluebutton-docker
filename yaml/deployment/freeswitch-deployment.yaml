@@ -23,6 +23,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: freeswitch
+    app: freeswitch
   name: freeswitch
 spec:
   replicas: 1
