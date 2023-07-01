@@ -125,10 +125,10 @@ mcs-address: localhost
 mcs-ws-timeout: 30000
 
 freeswitch:
-  ip: 127.0.0.1
-  sip_ip: 127.0.0.1
+  ip: 5.1.0.50
+  sip_ip: 5.1.0.50
   port: 5066
-  esl_ip: 127.0.0.1
+  esl_ip: 5.1.0.50
   esl_port: 8021
   #esl_password: FOOBAR
   handleExternalConnections: false
