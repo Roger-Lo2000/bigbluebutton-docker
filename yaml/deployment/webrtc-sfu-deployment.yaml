@@ -29,15 +29,15 @@ spec:
       containers:
         - env:
             - name: CLIENT_HOST
-              value: 5.1.0.50
+              value: 5.1.0.52
             - name: ESL_IP
               value: 5.1.0.50
             - name: ESL_PASSWORD
               value: 0GpeMD8ArEyUTOWr8I6gjuuHbhif1upnxGmnCvRs
             - name: FREESWITCH_IP
-              value: 5.1.0.50
-            - name: FREESWITCH_SIP_IP
               value: 34.81.117.231 ## external IP
+            - name: FREESWITCH_SIP_IP
+              value: 34.81.117.231
             - name: MS_RTP_LISTEN_IP
               value: '{"ip":"0.0.0.0", "announcedIp":"34.81.117.231"}'
             - name: MS_WEBRTC_LISTEN_IPS
