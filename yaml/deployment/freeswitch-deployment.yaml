@@ -42,7 +42,7 @@ spec:
         io.kompose.service: freeswitch
         app: freeswitch
     spec:
-      hostNetwork: true
+      # hostNetwork: true
       containers:
         - env:
             - name: ANNOUNCED_IPv4
