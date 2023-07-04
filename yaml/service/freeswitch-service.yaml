@@ -12,7 +12,7 @@ spec:
 
   - name: fsesl
     port: 8021
-    protocol: UDP
+    protocol: TCP
     targetPort: 8021
 
   - name: webrtc-sfu
