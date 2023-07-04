@@ -29,7 +29,7 @@ spec:
       containers:
         - env:
             - name: CLIENT_HOST
-              value: 5.1.0.52
+              value: 34.81.117.231
             - name: ESL_IP
               value: 5.1.0.50
             - name: ESL_PASSWORD
