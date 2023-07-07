@@ -23,8 +23,8 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: freeswitch
-    app: freeswitch
-    # app: nginx
+    # app: freeswitch
+    app: nginx
   name: freeswitch
 spec:
   replicas: 1
