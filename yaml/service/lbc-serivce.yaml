@@ -15,47 +15,48 @@ spec:
     - name: https
       port: 443
       targetPort: 443
-      
+          
     - name: udp-16384
       port: 16384
-      protocol: udp-16384
+      protocol: UDP
       targetPort: 16384
     - name: udp-16385
       port: 16385
-      protocol: udp-16385
+      protocol: UDP
       targetPort: 16385
     - name: udp-16386
       port: 16386
-      protocol: udp-16386
+      protocol: UDP
       targetPort: 16386
     - name: udp-16387
       port: 16387
-      protocol: udp-16387
+      protocol: UDP
       targetPort: 16387
     - name: udp-16388
       port: 16388
-      protocol: udp-16388
+      protocol: UDP
       targetPort: 16388
     - name: udp-16389
       port: 16389
-      protocol: udp-16389
+      protocol: UDP
       targetPort: 16389
     - name: udp-16390
       port: 16390
-      protocol: udp-16390
+      protocol: UDP
       targetPort: 16390
     - name: udp-16391
       port: 16391
-      protocol: udp-16391
+      protocol: UDP
       targetPort: 16391
     - name: udp-16392
       port: 16392
-      protocol: udp-16392
+      protocol: UDP
       targetPort: 16392
     - name: udp-16393
       port: 16393
-      protocol: udp-16393
+      protocol: UDP
       targetPort: 16393
+
 
   selector:
     app: nginx
