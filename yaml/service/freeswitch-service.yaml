@@ -20,11 +20,11 @@ spec:
     protocol: TCP
     targetPort: 5066
   
-  {{range seq 0 5}}
-  - port: {{add 16384 .}}
+  {{range $i := loop 0 10}}
+  - port: {{add 16384 $i}}
     protocol: UDP
-    targetPort: {{add 16384 .}}
-    name: UDP-{{add 16384 .}}
+    targetPort: {{add 16384 $i}}
+    name: UDP-{{add 16384 $i}}
   {{end}}
 
   selector:
