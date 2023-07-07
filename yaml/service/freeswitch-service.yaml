@@ -20,12 +20,11 @@ spec:
     protocol: TCP
     targetPort: 5066
   
-  {{range $i := loop 0 10}}
-  - port: {{ add $i 16384 }}
-    protocol: UDP
-    targetPort: {{ add $i 16384 }}
-    name: UDP-{{ add $i 16384 }}
-  {{end}}
+  {{- range seq 0 20 }}
+  - name: {{ add 16384 . }}
+    port: {{ add 16384 . }}
+    targetPort: {{ add 16384 . }}
+  {{- end }}
 
   selector:
     app: freeswitch
