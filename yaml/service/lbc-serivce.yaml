@@ -17,7 +17,7 @@ spec:
       targetPort: 443
   
 
-    - name: UDP-16384
+    - name: udp-16384
       port: 16384
       protocol: UDP
       targetPort: 16384
