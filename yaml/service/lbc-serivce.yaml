@@ -15,6 +15,13 @@ spec:
     - name: https
       port: 443
       targetPort: 443
+  
+  {{- range seq 0 20 }}
+    - name: UDP-{{ add 16384 . }}
+      port: {{ add 16384 . }}
+      protocol: UDP
+      targetPort: {{ add 16384 . }}
+  {{- end -}}
 
   selector:
     io.kompose.service: nginx

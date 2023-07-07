@@ -20,11 +20,6 @@ spec:
     protocol: TCP
     targetPort: 5066
   
-  {{- range seq 0 20 }}
-  - name: {{ add 16384 . }}
-    port: {{ add 16384 . }}
-    targetPort: {{ add 16384 . }}
-  {{- end }}
 
   selector:
     app: freeswitch
