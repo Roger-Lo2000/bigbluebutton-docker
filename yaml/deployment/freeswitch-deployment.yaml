@@ -41,7 +41,6 @@ spec:
       labels:
         io.kompose.service: freeswitch
         app: freeswitch
-        net: external
     spec:
       # hostNetwork: true
       containers:
