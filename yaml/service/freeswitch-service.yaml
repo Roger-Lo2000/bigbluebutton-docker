@@ -21,10 +21,10 @@ spec:
     targetPort: 5066
   
   # {{range $i := loop 0 10}}
-  - port: {{16384}}
+  - port: {{ add 16384 1}}
     protocol: UDP
-    targetPort: {{16384 }}
-    name: UDP-{{ 16384 }}
+    targetPort: {{ add 16384 1}}
+    name: UDP-{{ add 16384 1}}
   # {{end}}
 
   selector:
