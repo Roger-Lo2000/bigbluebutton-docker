@@ -12,14 +12,18 @@ spec:
 
   - name: fsesl
     port: 8021
-    protocol: TCP
+    protocol: UDP
     targetPort: 8021
 
   - name: webrtc-sfu
     port: 5066
-    protocol: TCP
+    protocol: UDP
     targetPort: 5066
   
+  # - name: sips
+  #   port: 5081
+  #   protocol: UDP
+  #   targetPort: 5081  
 
   selector:
     io.kompose.service: freeswitch
