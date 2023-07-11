@@ -1,7 +1,7 @@
 location /ws {
         resolver kube-dns.kube-system.svc.cluster.local;	
-	proxy_pass http://freeswitch-service.default.svc.cluster.local:7443;
-        
+	proxy_pass https://freeswitch-service.default.svc.cluster.local:7443;
+
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "Upgrade";
