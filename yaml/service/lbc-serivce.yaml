@@ -15,10 +15,12 @@ spec:
     - name: https
       port: 443
       targetPort: 443
+
     - name: udp-16384
       port: 16384
       protocol: UDP
       targetPort: 16384
+      
     - name: udp-16385
       port: 16385
       protocol: UDP
@@ -10011,6 +10013,7 @@ spec:
       port: 18882
       protocol: UDP
       targetPort: 18882
+
     - name: udp-18883
       port: 18883
       protocol: UDP
