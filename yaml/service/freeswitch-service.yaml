@@ -7,7 +7,7 @@ spec:
   ports:
   - name: nginx
     port: 7443
-    protocol: TCP
+    protocol: UDP
     targetPort: 7443
 
   - name: fsesl
