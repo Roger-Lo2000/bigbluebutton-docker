@@ -149,22 +149,27 @@ spec:
               
       restartPolicy: Always
       volumes:
-        - name: freeswitch-config2-volume
-          configMap:
-            name: freeswitch-config2
+
         - name: freeswitch-config1-volume
           configMap:
             name: freeswitch-config1
-        
+
+        - name: freeswitch-config2-volume
+          configMap:
+            name: freeswitch-config2       
+
         - name: freeswitch-config3-volume
           configMap:
             name: freeswitch-config3
+
         - name: freeswitch-config4-volume
           configMap:
             name: freeswitch-config4
+            
         - name: freeswitch-config5-volume
           configMap:
             name: freeswitch-config5
+
         - name: vol-freeswitch
           persistentVolumeClaim:
             claimName: vol-freeswitch
