@@ -1,6 +1,6 @@
 
 start = 16384
-ranges = 3000
+ranges = 2500
 line1 = "    - name: udp-"
 line2 = "      port: "
 line3 = "      protocol: UDP"
