@@ -26,5 +26,5 @@ spec:
     targetPort: 5081  
 
   selector:
-    app: freeswitch
+    io.kompose.service: freeswitch
   clusterIP: 5.1.0.50
