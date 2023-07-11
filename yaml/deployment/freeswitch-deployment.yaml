@@ -41,7 +41,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: freeswitch
-        app: freeswitch
+        app: nginx
     spec:
       # hostNetwork: true
       containers:
@@ -165,7 +165,7 @@ spec:
         - name: freeswitch-config4-volume
           configMap:
             name: freeswitch-config4
-            
+
         - name: freeswitch-config5-volume
           configMap:
             name: freeswitch-config5
