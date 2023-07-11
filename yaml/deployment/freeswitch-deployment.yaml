@@ -41,7 +41,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: freeswitch
-        app: nginx
+        app: freeswitch
     spec:
       # hostNetwork: true
       containers:
