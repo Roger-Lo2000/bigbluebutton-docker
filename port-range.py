@@ -1,13 +1,14 @@
 
 start = 16384
 ranges = 7192
-line1 = "- name: udp-"
-line2 = "  port: "
-line3 = "  protocol: UDP"
-line4 = "  targetPort: "
+line1 = "    - name: udp-"
+line2 = "      port: "
+line3 = "      protocol: UDP"
+line4 = "      targetPort: "
 
-for i in range(ranges):
-    with open("output","a") as f:
+
+with open("output","a") as f:
+    for i in range(ranges):
         f.writelines(line1 + str(start + i))
         f.writelines("\n")
         f.writelines(line2 + str(start + i))
