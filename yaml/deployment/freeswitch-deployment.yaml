@@ -98,24 +98,26 @@ spec:
             containerPort: 5066
           - name: sips
             containerPort: 5081
+
           - name: udp-16384
             containerPort: 16384
           - name: udp-16385
             containerPort: 16385  
-          - name: udp-16386
-            containerPort: 16386  
-          - name: udp-16387
-            containerPort: 16387  
-          - name: udp-16388
-            containerPort: 16388  
-          - name: udp-16389
-            containerPort: 16389  
-          - name: udp-16390
-            containerPort: 16390    
-          - name: udp-16391
-            containerPort: 16391 
-          - name: udp-16392
-            containerPort: 16392 
+            
+          # - name: udp-16386
+          #   containerPort: 16386  
+          # - name: udp-16387
+          #   containerPort: 16387  
+          # - name: udp-16388
+          #   containerPort: 16388  
+          # - name: udp-16389
+          #   containerPort: 16389  
+          # - name: udp-16390
+          #   containerPort: 16390    
+          # - name: udp-16391
+          #   containerPort: 16391 
+          # - name: udp-16392
+          #   containerPort: 16392 
           name: bbb-freeswitch
           resources: {}
           securityContext:
