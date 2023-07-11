@@ -7,22 +7,22 @@ spec:
   ports:
   - name: nginx
     port: 7443
-    protocol: UDP
+    protocol: TCP
     targetPort: 7443
 
   - name: fsesl
     port: 8021
-    protocol: UDP
+    protocol: TCP
     targetPort: 8021
 
   - name: webrtc-sfu
     port: 5066
-    protocol: UDP
+    protocol: TCP
     targetPort: 5066
   
   - name: sips
     port: 5081
-    protocol: UDP
+    protocol: TCP
     targetPort: 5081  
 
   selector:
