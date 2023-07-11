@@ -24,7 +24,7 @@ metadata:
   labels:
     io.kompose.service: freeswitch
     # app: freeswitch
-    # app: nginx
+    app: nginx
   name: freeswitch
 spec:
   replicas: 1
@@ -41,7 +41,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: freeswitch
-
+        app: freeswitch
     spec:
       # hostNetwork: true
       containers:
@@ -98,26 +98,6 @@ spec:
             containerPort: 5066
           - name: sips
             containerPort: 5081
-
-          - name: udp-16384
-            containerPort: 16384
-          - name: udp-16385
-            containerPort: 16385  
-
-          # - name: udp-16386
-          #   containerPort: 16386  
-          # - name: udp-16387
-          #   containerPort: 16387  
-          # - name: udp-16388
-          #   containerPort: 16388  
-          # - name: udp-16389
-          #   containerPort: 16389  
-          # - name: udp-16390
-          #   containerPort: 16390    
-          # - name: udp-16391
-          #   containerPort: 16391 
-          # - name: udp-16392
-          #   containerPort: 16392 
           name: bbb-freeswitch
           resources: {}
           securityContext:
@@ -151,27 +131,22 @@ spec:
               
       restartPolicy: Always
       volumes:
-
+        - name: freeswitch-config2-volume
+          configMap:
+            name: freeswitch-config2
         - name: freeswitch-config1-volume
           configMap:
             name: freeswitch-config1
-
-        - name: freeswitch-config2-volume
-          configMap:
-            name: freeswitch-config2       
-
+        
         - name: freeswitch-config3-volume
           configMap:
             name: freeswitch-config3
-
         - name: freeswitch-config4-volume
           configMap:
             name: freeswitch-config4
-
         - name: freeswitch-config5-volume
           configMap:
             name: freeswitch-config5
-
         - name: vol-freeswitch
           persistentVolumeClaim:
             claimName: vol-freeswitch
