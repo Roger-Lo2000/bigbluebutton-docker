@@ -37,22 +37,7 @@ spec:
       port: 18879
       protocol: UDP
       targetPort: 18879
-    - name: udp-18880
-      port: 18880
-      protocol: UDP
-      targetPort: 18880
-    - name: udp-18881
-      port: 18881
-      protocol: UDP
-      targetPort: 18881
-    - name: udp-18882
-      port: 18882
-      protocol: UDP
-      targetPort: 18882
-    - name: udp-18883
-      port: 18883
-      protocol: UDP
-      targetPort: 18883
+
 
 
   selector:
