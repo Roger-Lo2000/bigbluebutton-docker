@@ -39,7 +39,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: freeswitch
-        app: external
+        # app: external
     spec:
       # hostNetwork: true
       containers:
