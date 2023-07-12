@@ -23,7 +23,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: nginx
-        app: external
+        app: nginx
     spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet

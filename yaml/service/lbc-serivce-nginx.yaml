@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-resolved.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: nginx-service
+    app: nginx-service
+  name: nginx-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: https
+      port: 443
+      targetPort: 443
+
+
+  selector:
+    app: nginx
+  loadBalancerIP: 34.81.117.231
+  
+status:
+  loadBalancer: {}
