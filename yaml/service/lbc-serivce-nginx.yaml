@@ -9,13 +9,13 @@ metadata:
     io.kompose.service: nginx-service-lbc
     app: nginx-service-lbc
   name: nginx-service-lbc
+  
 spec:
   type: LoadBalancer
   ports:
     - name: https
       port: 443
       targetPort: 443
-
 
   selector:
     app: nginx
