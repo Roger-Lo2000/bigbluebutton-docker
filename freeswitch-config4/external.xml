@@ -75,8 +75,8 @@
 
     <param name="rtp-ip" value="$${local_ip_v4}"/>
     <param name="sip-ip" value="$${local_ip_v4}"/>
-    <param name="ext-rtp-ip" value="34.81.117.231"/>
-    <param name="ext-sip-ip" value="34.81.117.231"/>
+    <param name="ext-rtp-ip" value="$${external_rtp_ip}"/>
+    <param name="ext-sip-ip" value="$${external_sip_ip}"/>
 
     <!--
       Listen only clients somehow run into this timeout
@@ -114,7 +114,7 @@
     <!-- TLS version ("sslv23" (default), "tlsv1"). NOTE: Phones may not work with TLSv1 -->
     <param name="tls-version" value="$${sip_tls_version}"/>
     <param name="ws-binding"  value="0.0.0.0:5066"/>
-    <param name="ws-binding"  value="34.81.117.231:7443"/>
+    <param name="wss-binding"  value="0.0.0.0:7443"/>
     
 
     <!-- enable rtcp on every channel also can be done per leg basis with rtcp_audio_interval_msec variable set to passthru to pass it across a call-->
