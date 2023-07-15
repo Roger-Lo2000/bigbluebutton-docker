@@ -32,7 +32,7 @@ spec:
           name: nginx
           ports:
           - containerPort: 443
-          - containerPort: 48087
+          - containerPort: 7443
           - containerPort: 80
           resources: {}
           volumeMounts:

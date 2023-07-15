@@ -16,7 +16,9 @@ spec:
     - name: https
       port: 443
       targetPort: 443
-
+    - name: freeswitch
+      port: 7443
+      targetPort: 7443
   selector:
     app: nginx
   loadBalancerIP: 34.81.117.231
