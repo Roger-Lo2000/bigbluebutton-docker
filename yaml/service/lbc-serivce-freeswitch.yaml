@@ -12,7 +12,6 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-
     - name: udp-18874
       port: 18874
       protocol: UDP

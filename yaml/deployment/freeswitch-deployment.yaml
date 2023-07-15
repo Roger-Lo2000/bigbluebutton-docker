@@ -91,7 +91,7 @@ spec:
           - name: fsesl
             containerPort: 8021
           - name: nginx
-            containerPort: 7443
+            containerPort: 7444
           - name: webrtc-sfu
             containerPort: 5066
           - name: sips
