@@ -75,8 +75,8 @@
 
     <param name="rtp-ip" value="$${local_ip_v4}"/>
     <param name="sip-ip" value="$${local_ip_v4}"/>
-    <param name="ext-rtp-ip" value="$${external_rtp_ip}"/>
-    <param name="ext-sip-ip" value="$${external_sip_ip}"/>
+    <param name="ext-rtp-ip" value="34.81.117.231"/>
+    <param name="ext-sip-ip" value="34.81.117.231"/>
 
     <!--
       Listen only clients somehow run into this timeout
