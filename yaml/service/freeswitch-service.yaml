@@ -6,9 +6,9 @@ spec:
   type: ClusterIP
   ports:
   - name: nginx
-    port: 7444
+    port: 7443
     protocol: TCP
-    targetPort: 7444
+    targetPort: 7443
 
   - name: fsesl
     port: 8021
