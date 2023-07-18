@@ -130,9 +130,9 @@ spec:
               name: freeswitch-config5-volume
               subPath: "acl.conf.xml"
 
-            - mountPath: /etc/freeswitch/vars.xml
-              name: freeswitch-config6-volume
-              subPath: "vars.xml"
+            # - mountPath: /etc/freeswitch/vars.xml
+            #   name: freeswitch-config6-volume
+            #   subPath: "vars.xml"
 
             - mountPath: /var/freeswitch/meetings
               name: vol-freeswitch
@@ -159,9 +159,9 @@ spec:
           configMap:
             name: freeswitch-config5
 
-        - name: freeswitch-config6-volume
-          configMap:
-            name: freeswitch-config6
+        # - name: freeswitch-config6-volume
+        #   configMap:
+        #     name: freeswitch-config6
         - name: vol-freeswitch
           persistentVolumeClaim:
             claimName: vol-freeswitch
