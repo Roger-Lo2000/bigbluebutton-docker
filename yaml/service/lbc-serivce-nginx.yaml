@@ -18,34 +18,34 @@ spec:
       port: 443
       targetPort: https
     ## to freeswitch
-    # - name: udp-18874
-    #   port: 18874
-    #   protocol: UDP
-    #   targetPort: udp-18874 
-    # - name: udp-18875
-    #   port: 18875
-    #   protocol: UDP
-    #   targetPort: udp-18875
-    # - name: udp-18876
-    #   port: 18876
-    #   protocol: UDP
-    #   targetPort: udp-18876
-    # - name: udp-18877
-    #   port: 18877
-    #   protocol: UDP
-    #   targetPort: udp-18877
-    # - name: udp-18878
-    #   port: 18878
-    #   protocol: UDP
-    #   targetPort: udp-18878
-    # - name: udp-18879
-    #   port: 18879
-    #   protocol: UDP
-    #   targetPort: udp-18879
-    # - name: sips
-    #   port: 5081
-    #   protocol: TCP
-    #   targetPort: sips
+    - name: udp-18874
+      port: 18874
+      protocol: UDP
+      targetPort: udp-18874 
+    - name: udp-18875
+      port: 18875
+      protocol: UDP
+      targetPort: udp-18875
+    - name: udp-18876
+      port: 18876
+      protocol: UDP
+      targetPort: udp-18876
+    - name: udp-18877
+      port: 18877
+      protocol: UDP
+      targetPort: udp-18877
+    - name: udp-18878
+      port: 18878
+      protocol: UDP
+      targetPort: udp-18878
+    - name: udp-18879
+      port: 18879
+      protocol: UDP
+      targetPort: udp-18879
+    - name: sips
+      port: 5081
+      protocol: TCP
+      targetPort: sips
   selector:
     app: external
   loadBalancerIP: 34.81.117.231
