@@ -13,10 +13,10 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    ## to nginx
-    # - name: https
-    #   port: 443
-    #   targetPort: https 
+    # to nginx
+    - name: https
+      port: 443
+      targetPort: https 
     ## to freeswitch
     - name: udp-18874
       port: 18874
