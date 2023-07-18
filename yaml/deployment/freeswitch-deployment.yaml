@@ -39,7 +39,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: freeswitch
-        app: external
+        app: freeswitch
     spec:
       # hostNetwork: true
       containers:
@@ -100,8 +100,10 @@ spec:
           - name: udp-16000
             containerPort: 16000
             protocol: UDP
+
           - name: udp-18874
             containerPort: 18874
+            protocol: UDP
           - name: udp-18875
             containerPort: 18875
           - name: udp-18876
