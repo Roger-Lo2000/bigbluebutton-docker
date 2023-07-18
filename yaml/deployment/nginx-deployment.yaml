@@ -32,6 +32,7 @@ spec:
           name: nginx
           ports:
           - containerPort: 443
+            name: https
           - containerPort: 80
           resources: {}
           volumeMounts:
