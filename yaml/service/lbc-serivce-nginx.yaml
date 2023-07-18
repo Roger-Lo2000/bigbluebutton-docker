@@ -16,12 +16,12 @@ spec:
     ## to nginx
     - name: https
       port: 443
-      targetPort: http
+      targetPort: https
     ## to freeswitch
     - name: udp-18874
       port: 18874
       protocol: UDP
-      targetPort: udp-18874 
+      targetPort: 18874 
 
     - name: sips
       port: 5081
