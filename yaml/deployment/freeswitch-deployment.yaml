@@ -43,6 +43,19 @@ spec:
     spec:
       # hostNetwork: true
       containers:
+        - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-freeswitch:v2.5.0  
+          ports:
+          - containerPort: 18874
+            name: udp-18874
+
+          - name: fsesl
+            containerPort: 8021
+          - name: nginx
+            containerPort: 7443
+          - name: webrtc-sfu
+            containerPort: 5066
+          - name: sips
+            containerPort: 5081
         - env:
             - name: ANNOUNCED_IPv4
               value: 34.81.117.231
@@ -86,20 +99,7 @@ spec:
                 configMapKeyRef:
                   name: freeswitch
                   key: freeswitch.tls.enable
-          image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-freeswitch:v2.5.0
-          ports:
-          - containerPort: 18874
-            name: udp-18874
-            
 
-          - name: fsesl
-            containerPort: 8021
-          - name: nginx
-            containerPort: 7443
-          - name: webrtc-sfu
-            containerPort: 5066
-          - name: sips
-            containerPort: 5081
 
 
 
