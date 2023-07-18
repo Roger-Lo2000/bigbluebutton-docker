@@ -23,7 +23,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: nginx
-        app: nginx
+        app: external
     spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
@@ -31,8 +31,9 @@ spec:
         - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-nginx:v2.5.5-3
           name: nginx
           ports:
-          - containerPort: 443
-          - containerPort: 80
+          - name: https
+            containerPort: 443
+
           resources: {}
           volumeMounts:
             - mountPath: /var/bigbluebutton
