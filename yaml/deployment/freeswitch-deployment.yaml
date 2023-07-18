@@ -88,6 +88,10 @@ spec:
                   key: freeswitch.tls.enable
           image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/bbb-k8s-freeswitch:v2.5.0
           ports:
+          - containerPort: 18874
+            name: udp-18874
+            
+
           - name: fsesl
             containerPort: 8021
           - name: nginx
@@ -97,23 +101,9 @@ spec:
           - name: sips
             containerPort: 5081
 
-          - name: udp-16000
-            containerPort: 16000
-            protocol: UDP
-          - name: udp-18874
-            containerPort: 18874
-            protocol: UDP
-            
-          - name: udp-18875
-            containerPort: 18875
-          - name: udp-18876
-            containerPort: 18876
-          - name: udp-18877
-            containerPort: 18877
-          - name: udp-18878
-            containerPort: 18878
-          - name: udp-18879
-            containerPort: 18879  
+
+
+
                   
           name: bbb-freeswitch
           resources: {}
