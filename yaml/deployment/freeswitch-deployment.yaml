@@ -130,7 +130,7 @@ spec:
               name: freeswitch-config5-volume
               subPath: "acl.conf.xml"
 
-            - mountPath: /etc/freeswitch/autoload_configs/vars.xml
+            - mountPath: /etc/freeswitch/vars.xml
               name: freeswitch-config6-volume
               subPath: "vars.xml"
 
