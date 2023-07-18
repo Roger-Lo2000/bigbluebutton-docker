@@ -41,7 +41,7 @@ spec:
     - name: udp-18879
       port: 18879
       protocol: UDP
-      targetPort: udp-18879
+      targetPort: 18879
 
     - name: sips
       port: 5081
