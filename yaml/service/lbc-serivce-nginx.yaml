@@ -16,7 +16,7 @@ spec:
     # to nginx
     - name: https
       port: 443
-      targetPort: https 
+      targetPort: 443
     ## to freeswitch
     # - name: udp-16000
     #   port: 16000
