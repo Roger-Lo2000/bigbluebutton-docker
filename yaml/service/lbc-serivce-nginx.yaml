@@ -18,28 +18,32 @@ spec:
       port: 443
       targetPort: https 
     ## to freeswitch
-    - name: udp18874
-      port: 18874
+    - name: udp-16000
+      port: 16000
       protocol: UDP
-      targetPort: udp-18874
-      
-    - name: udp18875
+      targetPort: udp-16000
+
+    - name: udp-18875
+      port: 18875
+      protocol: UDP
+      targetPort: udp-18875      
+    - name: udp-18875
       port: 18875
       protocol: UDP
       targetPort: udp-18875
-    - name: udp18876
+    - name: udp-18876
       port: 18876
       protocol: UDP
       targetPort: udp-18876
-    - name: udp18877
+    - name: udp-18877
       port: 18877
       protocol: UDP
       targetPort: udp-18877
-    - name: udp18878
+    - name: udp-18878
       port: 18878
       protocol: UDP
       targetPort: udp-18878
-    - name: udp18879
+    - name: udp-18879
       port: 18879
       protocol: UDP
       targetPort: 18879

@@ -96,7 +96,9 @@ spec:
             containerPort: 5066
           - name: sips
             containerPort: 5081
-
+            
+          - name: udp-16000
+            containerPort: 16000
           - name: udp-18874
             containerPort: 18874
           - name: udp-18875
