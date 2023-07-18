@@ -15,6 +15,9 @@
       <node type="allow" cidr="192.168.0.0/16"/>       -->
     </list>
 
+    <list name="localnet.auto" default="allow">
+
+    </list>  
     <!--
         custom "loopback" so that traffic from docker
         containers is also considered as local
