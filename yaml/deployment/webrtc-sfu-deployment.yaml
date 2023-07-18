@@ -25,7 +25,7 @@ spec:
         io.kompose.service: webrtc-sfu
         app: webrtc-sfu
     spec:
-      hostNetwork: true
+      # hostNetwork: true
       containers:
         - env:
             - name: CLIENT_HOST

@@ -25,7 +25,7 @@ spec:
         io.kompose.service: kurento
         app: kurento
     spec:
-      hostNetwork: true
+      # hostNetwork: true
       containers:
         - image: asia-east1-docker.pkg.dev/mplus-video-conference-dev/mplus/kurento-media-server:6.17
           name: kurento
