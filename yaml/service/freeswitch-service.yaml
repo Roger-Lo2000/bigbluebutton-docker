@@ -23,7 +23,7 @@ spec:
   # - name: sips
   #   port: 5081
   #   protocol: TCP
-  #   targetPort: 5081  
+  #   targetPort: 5081
 
   selector:
     io.kompose.service: freeswitch
