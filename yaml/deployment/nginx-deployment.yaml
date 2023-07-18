@@ -48,7 +48,7 @@ spec:
 
             - mountPath: /tmp/
               name: ssl-config-volume
-              # need to think how to pass into it
+              # need to think how to pass into it ## oone
             - mountPath: /www/default.pdf
               name: nginx-default-pdf-volume
               subPath: "default.pdf"
