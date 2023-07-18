@@ -21,7 +21,7 @@ spec:
     - name: udp-18874
       port: 18874
       protocol: UDP
-      targetPort: 18874 
+      targetPort: udp-18874
 
     - name: sips
       port: 5081
