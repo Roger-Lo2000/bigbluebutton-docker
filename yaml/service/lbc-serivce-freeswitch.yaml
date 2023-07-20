@@ -29,11 +29,10 @@ spec:
       port: 18879
       protocol: UDP
       targetPort: udp-18879
-
-    - name: sips
-      port: 5081
-      protocol: TCP
-      targetPort: sips
+    # - name: sips
+    #   port: 5081
+    #   protocol: TCP
+    #   targetPort: sips
 
 
   selector:
