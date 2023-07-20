@@ -55,7 +55,7 @@ spec:
           - name: webrtc-sfu
             containerPort: 5066
           - name: sips
-            containerPort: 5081
+            containerPort: 5090
           env:
             - name: ANNOUNCED_IPv4
               value: 34.81.117.231
