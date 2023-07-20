@@ -35,7 +35,7 @@ spec:
     #   targetPort: sips
     - name: sips
       port: 5090
-      protocol: UDP
+      protocol: TCP
       targetPort: sips
 
 
