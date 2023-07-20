@@ -5,10 +5,10 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    # - name: udp-18874
-    #   port: 18874
-    #   protocol: UDP
-    #   targetPort: udp-18874 
+    - name: udp-18874
+      port: 18874
+      protocol: UDP
+      targetPort: udp-18874 
     # - name: udp-18875
     #   port: 18875
     #   protocol: UDP
