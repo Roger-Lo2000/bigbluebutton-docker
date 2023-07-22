@@ -112,11 +112,11 @@ spec:
                 - SYS_NICE
                 - SYS_RESOURCE
           volumeMounts:
-            # - mountPath: /etc/freeswitch/dialplan/public_docker
-            #   name: freeswitch-config1-volume
+            - mountPath: /etc/freeswitch/dialplan/public_docker
+              name: freeswitch-config1-volume
 
-            # - mountPath: /etc/freeswitch/sip_profiles/external
-            #   name: freeswitch-config2-volume         
+            - mountPath: /etc/freeswitch/sip_profiles/external
+              name: freeswitch-config2-volume         
 
               
             - mountPath: /etc/freeswitch/autoload_configs/event_socket.conf.xml
@@ -139,13 +139,13 @@ spec:
               
       restartPolicy: Always
       volumes:
-        # - name: freeswitch-config1-volume
-        #   configMap:
-        #     name: freeswitch-config1
+        - name: freeswitch-config1-volume
+          configMap:
+            name: freeswitch-config1
 
-        # - name: freeswitch-config2-volume
-        #   configMap:
-        #     name: freeswitch-config2
+        - name: freeswitch-config2-volume
+          configMap:
+            name: freeswitch-config2
 
         - name: freeswitch-config3-volume
           configMap:
