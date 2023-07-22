@@ -123,7 +123,7 @@ spec:
               name: freeswitch-config3-volume
               subPath: "event_socket.conf.xml"
 
-            - mountPath: /etc/freeswitch/autoload_config/acl.conf.xml
+            - mountPath: /etc/freeswitch/autoload_configs/acl.conf.xml
               name: freeswitch-config4-volume
               subPath: "acl.conf.xml"
 
