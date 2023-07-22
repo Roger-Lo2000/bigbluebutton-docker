@@ -112,23 +112,23 @@ spec:
                 - SYS_NICE
                 - SYS_RESOURCE
           volumeMounts:
-            - mountPath: /etc/freeswitch/dialplan/public_docker
-              name: freeswitch-config1-volume
+            # - mountPath: /etc/freeswitch/dialplan/public_docker
+            #   name: freeswitch-config1-volume
 
-            - mountPath: /etc/freeswitch/sip_profiles/external
-              name: freeswitch-config2-volume         
+            # - mountPath: /etc/freeswitch/sip_profiles/external
+            #   name: freeswitch-config2-volume         
 
               
             - mountPath: /etc/freeswitch/autoload_configs/event_socket.conf.xml
               name: freeswitch-config3-volume
               subPath: "event_socket.conf.xml"
 
-            - mountPath: /etc/freeswitch/sip_profiles/
-              name: freeswitch-config4-volume
+            # - mountPath: /etc/freeswitch/sip_profiles/
+            #   name: freeswitch-config4-volume
 
-            - mountPath: /etc/freeswitch/autoload_configs/acl.conf.xml
-              name: freeswitch-config5-volume
-              subPath: "acl.conf.xml"
+            # - mountPath: /etc/freeswitch/autoload_configs/acl.conf.xml
+            #   name: freeswitch-config5-volume
+            #   subPath: "acl.conf.xml"
 
             # - mountPath: /etc/freeswitch/vars.xml
             #   name: freeswitch-config6-volume
@@ -139,25 +139,25 @@ spec:
               
       restartPolicy: Always
       volumes:
-        - name: freeswitch-config1-volume
-          configMap:
-            name: freeswitch-config1
+        # - name: freeswitch-config1-volume
+        #   configMap:
+        #     name: freeswitch-config1
 
-        - name: freeswitch-config2-volume
-          configMap:
-            name: freeswitch-config2
+        # - name: freeswitch-config2-volume
+        #   configMap:
+        #     name: freeswitch-config2
 
         - name: freeswitch-config3-volume
           configMap:
             name: freeswitch-config3
 
-        - name: freeswitch-config4-volume
-          configMap:
-            name: freeswitch-config4
+        # - name: freeswitch-config4-volume
+        #   configMap:
+        #     name: freeswitch-config4
 
-        - name: freeswitch-config5-volume
-          configMap:
-            name: freeswitch-config5
+        # - name: freeswitch-config5-volume
+        #   configMap:
+        #     name: freeswitch-config5
 
         # - name: freeswitch-config6-volume
         #   configMap:
