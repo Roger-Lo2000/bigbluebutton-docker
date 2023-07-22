@@ -6,7 +6,7 @@ location /ws {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "Upgrade";
         proxy_set_header X-Forwarded-Proto https;
-        proxy_set_header X-Forwarded-Ssl on; 
+        proxy_set_header X-Forwarded-Ssl off; 
         proxy_read_timeout 6h;
         proxy_send_timeout 6h;
         client_body_timeout 6h;
