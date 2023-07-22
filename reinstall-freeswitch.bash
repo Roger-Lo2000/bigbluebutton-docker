@@ -12,5 +12,5 @@ kubectl create configmap freeswitch-config2 --from-file=freeswitch-config2
 kubectl create configmap freeswitch-config3 --from-file=freeswitch-config3
 kubectl create configmap freeswitch-config4 --from-file=freeswitch-config4
 kubectl create configmap freeswitch-config5 --from-file=freeswitch-config5
-kubectl create configmap freeswitch-config6 --from-file=freeswitch-config6
+# kubectl create configmap freeswitch-config6 --from-file=freeswitch-config6
 kubectl apply -f yaml/deployment/freeswitch-deployment.yaml
