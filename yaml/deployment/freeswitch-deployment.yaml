@@ -137,8 +137,6 @@ spec:
             - mountPath: /var/freeswitch/meetings
               name: vol-freeswitch
               
-            - mountPath: /etc/freeswitch/certs
-              name: ssl-config-volume
       restartPolicy: Always
       volumes:
         - name: freeswitch-config1-volume
@@ -168,7 +166,5 @@ spec:
         - name: vol-freeswitch
           persistentVolumeClaim:
             claimName: vol-freeswitch
-        - name: ssl-config-volume
-          configMap:
-            name: ssl-config
+
 status: {}
