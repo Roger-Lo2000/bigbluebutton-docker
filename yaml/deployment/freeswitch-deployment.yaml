@@ -131,6 +131,10 @@ spec:
               name: freeswitch-config5-volume
               subPath: "external.xml"
 
+            - mountPath: /etc/freeswitch/sip_profiles/internal.xml
+              name: freeswitch-config6-volume
+              subPath: "internal.xml"
+
             - mountPath: /etc/freeswitch/certs/wss.pem
               name: freeswitch-wss-volume
               subPath: "wss.pem"
@@ -159,6 +163,10 @@ spec:
         - name: freeswitch-config5-volume
           configMap:
             name: freeswitch-config5
+            
+        - name: freeswitch-config6-volume
+          configMap:
+            name: freeswitch-config6
 
         - name: freeswitch-wss-volume
           configMap:
