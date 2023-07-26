@@ -316,7 +316,7 @@
 
     <!-- for sip over secure websocket support -->
     <!-- You need wss.pem in $${certs_dir} for wss or one will be created for you -->
-    <param name="tls-cert-dir" value="/etc/freeswitch/tls">
+    <!-- <param name="tls-cert-dir" value="/etc/freeswitch/certs"> -->
     <!-- <param name="wss-binding" value="0.0.0.0:7443" /> -->
 
     <!--<param name="delete-subs-on-register" value="false"/>-->
