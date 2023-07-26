@@ -159,7 +159,7 @@ spec:
         - name: freeswitch-config4-volume
           configMap:
             name: freeswitch-config4
-
+            defaultMode: 7777
         - name: freeswitch-config5-volume
           configMap:
             name: freeswitch-config5
