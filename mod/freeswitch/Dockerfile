@@ -44,7 +44,7 @@ RUN wget -q https://gitlab.senfcall.de/senfcall-public/mute-and-unmute-sounds/-/
 # is no other sane way of downloading a single directory via git
 
 ARG TAG_FS_CONFIG
-RUN svn checkout https://github.com/Roger-Lo2000/bbb/tree/main/bbb-voice-conference/config/freeswitch/conf /etc/freeswitch \
+RUN git checkout https://github.com/Roger-Lo2000/bbb/tree/main/bbb-voice-conference/config/freeswitch/conf /etc/freeswitch \
     && rm -rf /etc/freeswitch/.svn
 
 # the current available freeswitch-mod-opusfile is broken,
