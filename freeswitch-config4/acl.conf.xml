@@ -24,7 +24,7 @@
       <node type="allow" cidr="10.0.0.0/8"/>
       <node type="allow" cidr="192.168.0.0/16"/>
       <node type="allow" cidr="172.16.0.0/12" />
-      <node type="allow" cidr="5.0.0.0/24" />
+      <!-- <node type="allow" cidr="5.0.0.0/24" /> -->
       <node type="allow" cidr="$${external_ip_v4}/32"/>
     </list>
 
