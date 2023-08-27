@@ -30,13 +30,10 @@ kubectl create configmap ssl-config --from-file=ssl-config
 
 ## 刪除nginx -> 刪除nginx-config -> 部署nginx-config -> 部署nginx
 
-
 kubectl apply -f ./yaml --recursive 
 
 docker stop $(docker ps -aq)
 docker remove $(docker ps -aq)
-
-
 
 
 INSERT INTO users (id,room_id,provider,uid,name,username,email,social_uid,image,password_digest,accepted_terms,created_at,updated_at,email_verified,language,reset_digest,reset_sent_at,activation_digest,activated_at,deleted,role_id,last_login,failed_attempts,last_failed_attempt,last_pwd_update) VALUES (1,2,3,4,5,6,7,8,9,10,FALSE,'2023-05-25 10:30:00','2023-05-25 10:30:00',FALSE,15,16,'2023-05-25 10:30:00',18,'2023-05-25 10:30:00',FALSE,21,'2023-05-25 10:30:00',23,'2023-05-25 10:30:00','2023-05-25 10:30:00');
