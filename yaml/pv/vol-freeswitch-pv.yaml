@@ -9,8 +9,8 @@ spec:
   accessModes:
     - ReadWriteMany
   csi:
-  driver: gcsfuse.csi.storage.gke.io
-  volumeHandle: gcs-fuse-demo-bucket 
+    driver: gcsfuse.csi.storage.gke.io
+    volumeHandle: gcs-fuse-demo-bucket 
   # nfs:
   #   path: /persistentVolume
   #   server: 10.21.145.2
