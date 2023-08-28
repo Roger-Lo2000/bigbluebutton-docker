@@ -18,7 +18,7 @@ metadata:
     io.kompose.service: nginx
   name: nginx
 spec:
-  serviceAccountName: bbb-gke
+  serviceAccountName: cs-fuse
   replicas: 1
   selector:
     matchLabels:
