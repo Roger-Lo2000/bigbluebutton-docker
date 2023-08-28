@@ -61,15 +61,27 @@ spec:
               subPath: "default.pdf"
       restartPolicy: Always
       volumes:
-        - name: bigbluebutton
-          persistentVolumeClaim:
-            claimName: bigbluebutton
+        # - name: bigbluebutton
+        #   persistentVolumeClaim:
+        #     claimName: bigbluebutton
             
-        - name: html5-static
-          persistentVolumeClaim:
-            claimName: html5-static
-            readOnly: true
+        # - name: html5-static
+        #   persistentVolumeClaim:
+        #     claimName: html5-static
+        #     readOnly: true
 
+        - name: bigbluebotton
+          csi:
+            driver: gcsfuse.csi.storage.gke.io
+            volumeAttributes:
+              butckName: bbb-gke
+        
+        - name: html5-static
+          csi:
+            driver: gcsfuse.csi.storage.gke.io
+            volumeAttributes:
+              butckName: bbb-gke
+              
         - name: nginx-config-volume
           configMap:
             name: nginx-config

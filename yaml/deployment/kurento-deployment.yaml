@@ -10,6 +10,7 @@ metadata:
     io.kompose.service: kurento
   name: kurento
 spec:
+  serviceAccountName: cs-fuse
   replicas: 1
   selector:
     matchLabels:
