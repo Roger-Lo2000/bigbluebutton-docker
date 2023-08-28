@@ -4,7 +4,7 @@ metadata:
   name: ssl-data
 spec:
   storageClassName: "ssl-data"
-  volumeName: bbb-gke
+  volumeName: ssl-data-pv
   accessModes:
     - ReadWriteMany
   resources:
