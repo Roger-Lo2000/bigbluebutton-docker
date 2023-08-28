@@ -18,6 +18,7 @@ metadata:
     io.kompose.service: nginx
   name: nginx
 spec:
+  serviceAccountName: bbb-gke
   replicas: 1
   selector:
     matchLabels:
