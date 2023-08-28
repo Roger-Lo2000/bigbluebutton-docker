@@ -48,12 +48,12 @@ spec:
           - containerPort: 80
           resources: {}
           volumeMounts:
-            - mountPath: /var/bigbluebutton
-              name: bigbluebutton
+            # - mountPath: /var/bigbluebutton
+            #   name: bigbluebutton
 
-            - mountPath: /html5-static
-              name: html5-static
-              readOnly: true
+            # - mountPath: /html5-static
+            #   name: html5-static
+            #   readOnly: true
 
             - mountPath: /etc/nginx/bbb/
               name: nginx-config-volume
