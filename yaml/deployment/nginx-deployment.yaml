@@ -48,12 +48,12 @@ spec:
           - containerPort: 80
           resources: {}
           volumeMounts:
-            # - mountPath: /var/bigbluebutton
-            #   name: bigbluebutton
+            - mountPath: /var/bigbluebutton
+              name: bigbluebutton
 
-            # - mountPath: /html5-static
-            #   name: html5-static
-            #   readOnly: true
+            - mountPath: /html5-static
+              name: html5-static
+              readOnly: true
 
             - mountPath: /etc/nginx/bbb/
               name: nginx-config-volume
@@ -69,14 +69,14 @@ spec:
               subPath: "default.pdf"
       restartPolicy: Always
       volumes:
-        # - name: bigbluebutton
-        #   persistentVolumeClaim:
-        #     claimName: bigbluebutton
+        - name: bigbluebutton
+          persistentVolumeClaim:
+            claimName: bigbluebutton
             
-        # - name: html5-static
-        #   persistentVolumeClaim:
-        #     claimName: html5-static
-        #     readOnly: true
+        - name: html5-static
+          persistentVolumeClaim:
+            claimName: html5-static
+            readOnly: true
 
         - name: nginx-config-volume
           configMap:
