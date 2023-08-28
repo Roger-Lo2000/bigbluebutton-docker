@@ -70,7 +70,7 @@ spec:
         #     claimName: html5-static
         #     readOnly: true
 
-        - name: bigbluebotton
+        - name: bigbluebutton
           csi:
             driver: gcsfuse.csi.storage.gke.io
             volumeAttributes:
@@ -81,7 +81,7 @@ spec:
             driver: gcsfuse.csi.storage.gke.io
             volumeAttributes:
               butckName: bbb-gke
-              
+
         - name: nginx-config-volume
           configMap:
             name: nginx-config
