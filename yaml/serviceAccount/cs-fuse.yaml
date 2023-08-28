@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: cs-fuse
+  namespace: default
+  annotations:
+    iam.gke.io/gcp-service-account: bbb-gke@mplus-video-conference-dev.iam.gserviceaccount.com

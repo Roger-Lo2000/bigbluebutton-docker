@@ -4,7 +4,6 @@ metadata:
   name: html5-static
 spec:
   storageClassName: "html5-static"
-  volumeName: html5-static-pv
   accessModes:
     - ReadWriteMany
   resources:

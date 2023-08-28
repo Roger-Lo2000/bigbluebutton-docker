@@ -4,7 +4,6 @@ metadata:
   name: vol-kurento
 spec:
   storageClassName: "vol-kurento"
-  volumeName: vol-kurento-pv
   accessModes:
     - ReadWriteMany
   resources:

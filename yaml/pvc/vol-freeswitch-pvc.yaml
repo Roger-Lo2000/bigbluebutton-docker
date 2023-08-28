@@ -4,7 +4,6 @@ metadata:
   name: vol-freeswitch
 spec:
   storageClassName: "vol-freeswitch"
-  volumeName: vol-freeswitch-pv
   accessModes:
     - ReadWriteMany
   resources:

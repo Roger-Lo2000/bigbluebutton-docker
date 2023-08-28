@@ -6,7 +6,6 @@ spec:
   accessModes:
     - ReadWriteMany
   storageClassName: "bigbluebotton"
-  volumeName: bigbluebotton-pv
   resources:
     requests:
       storage: 10Gi
