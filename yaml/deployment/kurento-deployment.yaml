@@ -10,7 +10,6 @@ metadata:
     io.kompose.service: kurento
   name: kurento
 spec:
-  
   replicas: 1
   selector:
     matchLabels:

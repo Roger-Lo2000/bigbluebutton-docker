@@ -74,13 +74,13 @@ spec:
           csi:
             driver: gcsfuse.csi.storage.gke.io
             volumeAttributes:
-              butckName: bbb-gke
+              bucketName: bbb-gke
         
         - name: html5-static
           csi:
             driver: gcsfuse.csi.storage.gke.io
             volumeAttributes:
-              butckName: bbb-gke
+              bucketName: bbb-gke
 
         - name: nginx-config-volume
           configMap:
