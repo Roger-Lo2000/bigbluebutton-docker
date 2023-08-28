@@ -4,6 +4,7 @@ metadata:
   name: vol-freeswitch
 spec:
   storageClassName: "vol-freeswitch"
+  volumeName: bbb-gke
   accessModes:
     - ReadWriteMany
   resources:

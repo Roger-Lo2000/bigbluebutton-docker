@@ -4,6 +4,7 @@ metadata:
   name: vol-mediasoup
 spec:
   storageClassName: "vol-mediasoup"
+  volumeName: bbb-gke
   accessModes:
     - ReadWriteMany
   resources:

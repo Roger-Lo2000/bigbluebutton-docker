@@ -6,6 +6,7 @@ spec:
   accessModes:
     - ReadWriteMany
   storageClassName: "bigbluebotton"
+  volumeName: bbb-gke
   resources:
     requests:
       storage: 10Gi

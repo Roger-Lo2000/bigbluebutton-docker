@@ -4,6 +4,7 @@ metadata:
   name: html5-static
 spec:
   storageClassName: "html5-static"
+  volumeName: bbb-gke
   accessModes:
     - ReadWriteMany
   resources:
