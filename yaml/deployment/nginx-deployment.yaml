@@ -18,7 +18,6 @@ metadata:
     io.kompose.service: nginx
   name: nginx
 spec:
-  serviceAccountName: cs-fuse
   replicas: 1
   selector:
     matchLabels:
@@ -37,6 +36,7 @@ spec:
       annotations:
         gke-gcsfuse/volumes: "true"
     spec:
+      serviceAccountName: cs-fuse
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
