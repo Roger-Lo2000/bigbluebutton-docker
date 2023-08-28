@@ -51,3 +51,26 @@ psql
 \l #查詢 list of databases
 \c greenlight # 進去greenlight database
 \dt # 查詢 list of relations
+
+
+export GCP_PROJECT=mplus-video-conference-dev
+export BUCKET_NAME=bbb-gke
+export GCP_SA_NAME=bbb-gke
+export K8S_NAMESPACE=default
+export K8S_SA_NAME=bbb-gke
+
+
+# Create a GCP service account in the Cloud Storage bucket project.
+gcloud iam service-accounts create bbb-gke --project=mplus-video-conference-dev
+
+#Apply permissions to a specific bucket.
+gcloud storage buckets add-iam-policy-binding gs://bbb-gke \
+  --member "serviceAccount:bbb-gke@mplus-video-conference-dev.iam.gserviceaccount.com" \
+  --role "roles/storage.objectAdmin" \
+  --project mplus-video-conference-dev
+
+#Bind the the Kubernetes Service Account with the GCP Service Account. The kubernetes resources will be created in the next step.
+gcloud iam service-accounts add-iam-policy-binding bbb-gke@mplus-video-conference-dev.iam.gserviceaccount.com \
+  --role roles/iam.workloadIdentityUser \
+  --member "serviceAccount:mplus-video-conference-dev.svc.id.goog[default/bbb-gke]" \
+  --project mplus-video-conference-dev

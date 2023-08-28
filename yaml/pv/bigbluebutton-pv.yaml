@@ -5,9 +5,13 @@ metadata:
 spec:
   storageClassName: bigbluebotton
   capacity:
-    storage: 100Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteMany
-  nfs:
-    path: /persistentVolume
-    server: 10.21.145.2
+  csi:
+    driver: gcsfuse.csi.storage.gke.io
+    volumeHandle: gcs-fuse-demo-bucket
+    # readOnly: true #optional
+  # nfs:
+  #   path: /persistentVolume
+  #   server: 10.21.145.2

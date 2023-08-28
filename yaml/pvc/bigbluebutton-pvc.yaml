@@ -8,5 +8,5 @@ spec:
   storageClassName: "bigbluebotton"
   resources:
     requests:
-      storage: 100Gi
+      storage: 10Gi
 status: {}

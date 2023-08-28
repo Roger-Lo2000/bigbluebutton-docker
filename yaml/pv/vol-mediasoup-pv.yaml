@@ -5,7 +5,7 @@ metadata:
 spec:
   storageClassName: vol-mediasoup
   capacity:
-    storage: 100Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteMany
   nfs:

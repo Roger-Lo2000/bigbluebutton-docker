@@ -5,7 +5,7 @@ metadata:
 spec:
   storageClassName: vol-freeswitch
   capacity:
-    storage: 100Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteMany
   nfs:
