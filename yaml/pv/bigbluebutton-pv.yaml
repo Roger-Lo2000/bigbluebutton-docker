@@ -10,7 +10,7 @@ spec:
     - ReadWriteMany
   csi:
     driver: gcsfuse.csi.storage.gke.io
-    volumeHandle: gcs-fuse-demo-bucket
+    volumeHandle: bbb-gke
     # readOnly: true #optional
   # nfs:
   #   path: /persistentVolume
