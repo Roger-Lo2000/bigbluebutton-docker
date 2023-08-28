@@ -2,9 +2,9 @@
 kubectl delete configMap https-proxy-config
 kubectl delete configMap mongodb-config
 kubectl delete --all deployment --namespace=default
-kubectl delete svc --all
 kubectl delete pvc --all
 kubectl delete pv --all
+kubectl delete svc --all
 
 kubectl get pods --all-namespaces | grep ContainerStatusUnknown | awk '{print $2 " --namespace=" $1}' | xargs kubectl delete pod
 kubectl get pods --all-namespaces | grep Evicted | awk '{print $2 " --namespace=" $1}' | xargs kubectl delete pod

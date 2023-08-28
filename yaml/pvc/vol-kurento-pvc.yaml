@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: vol-kurento
 spec:
+  volumeName: vol-kurento-pv
   storageClassName: "vol-kurento"
   accessModes:
     - ReadWriteMany

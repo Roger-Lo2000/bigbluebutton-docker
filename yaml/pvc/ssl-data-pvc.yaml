@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: ssl-data
 spec:
+  volumeName: ssl-data-pv
   storageClassName: "ssl-data"
   accessModes:
     - ReadWriteMany

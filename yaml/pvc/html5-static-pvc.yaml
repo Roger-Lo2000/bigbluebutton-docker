@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: html5-static
 spec:
+  volumeName: html5-static-pv
   storageClassName: "html5-static"
   accessModes:
     - ReadWriteMany

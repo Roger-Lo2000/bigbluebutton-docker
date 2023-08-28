@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: vol-freeswitch
 spec:
+  volumeName: vol-freeswitch-pv
   storageClassName: "vol-freeswitch"
   accessModes:
     - ReadWriteMany

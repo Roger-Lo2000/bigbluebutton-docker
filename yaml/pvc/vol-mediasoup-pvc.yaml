@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: vol-mediasoup
 spec:
+  volumeName: vol-mediasoup-pv
   storageClassName: "vol-mediasoup"
   accessModes:
     - ReadWriteMany

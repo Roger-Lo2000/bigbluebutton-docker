@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: bigbluebutton
 spec:
+  volumName: bigbluebutton-pv
   accessModes:
     - ReadWriteMany
   storageClassName: "bigbluebotton"
